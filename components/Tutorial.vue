@@ -13,13 +13,7 @@
       </ul>
     </nav>
     <section id="Top" class="top">
-      <br>
-      <br>
-      <br>
-      <br>
-      <h1>Welcome!!</h1>
-      <h1>My Portfolio Site</h1>
-      <br>
+      <TopPage />
       <div class="scrolldown"><span>Scroll</span></div>
     </section>
     <div id="About" class="about">
@@ -193,55 +187,10 @@
   .top {
     padding-top: 40px;
     padding-bottom: 40px;
-
     height: 600px;
-    text-align: center;
-  }
-  .top h1{
-    font-size: 50px;
-    font-family: cursive;
-  }
-  .scrolldown{
-    position:absolute;
-    bottom: 3%;
-    left: 3%;
-    animation: arrowmove 1s ease-in-out infinite;
-  }
-  .scrolldown span{
-    position: absolute;
-    left:-20px;
-    bottom:12px;
-    color: black;
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
-
-    -ms-writing-mode: tb-rl;
-    -webkit-writing-mode: vertical-rl;
-    writing-mode: vertical-rl;
-  }
-  .scrolldown:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: -6px;
-
-    width: 1px;
-    height: 20px;
-    background: black;
-    transform: skewX(-31deg);
-  }
-  .scrolldown:after{
-    content:"";
-    position: absolute;
-    bottom:0;
-    right:0;
-
-    width:1px;
-    height: 50px;
-    background: black;
   }
   .about {
-    background: lightcyan;
+    background: linear-gradient(to bottom, white, lightcyan);
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 30px;
@@ -258,11 +207,8 @@
     font-size: 40px;
     font-family: serif;
   }
-  .about th{
-    padding-right: 40px;
-  }
   .works {
-    background: lightgoldenrodyellow;
+    background: linear-gradient(to bottom, lightcyan, lightgoldenrodyellow);
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 30px;
@@ -282,7 +228,7 @@
     display: inline-block;
   }
   .skills {
-    background: #FFEEFF;
+    background: linear-gradient(to bottom, lightgoldenrodyellow, #FFEEFF);
     padding-top: 40px;
     padding-bottom: 80px;
     padding-left: 30px;
@@ -299,7 +245,7 @@
     font-family: serif;
   }
   .contact {
-    background: #CCFFCC;
+    background: linear-gradient(to bottom, #FFEEFF, #CCFFCC);
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 30px;
@@ -440,6 +386,46 @@
     font-size: 17px;
     font-family: cursive;
   }
+  .scrolldown{
+    position:absolute;
+    bottom: 3%;
+    left: 3%;
+    animation: arrowmove 1s ease-in-out infinite;
+    cursor: default;
+  }
+  .scrolldown span{
+    position: absolute;
+    left:-20px;
+    bottom:12px;
+    color: black;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+  }
+  .scrolldown:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -6px;
+
+    width: 1px;
+    height: 20px;
+    background: black;
+    transform: skewX(-31deg);
+  }
+  .scrolldown:after{
+    content:"";
+    position: absolute;
+    bottom:0;
+    right:0;
+
+    width:1px;
+    height: 50px;
+    background: black;
+  }
   @keyframes arrowmove{
     0%{
       bottom: 3%;
@@ -455,6 +441,7 @@
 
 <script>
 import SquareBox from './SquareBox.vue';
+import TopPage from './TopPage.vue';
 export default {
     name: "NuxtTutorial",
     data() {
@@ -466,6 +453,6 @@ export default {
         };
     },
     methods: {},
-    components: { SquareBox }
+    components: { SquareBox, TopPage }
 }
 </script>
