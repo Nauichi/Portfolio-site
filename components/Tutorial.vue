@@ -37,17 +37,17 @@
     <div id="Works" class="works">
       <h2>WORKS</h2>
       <SlideIn>
-        <a href="#">
+        <a href="Not.html" target="_blank">
           <div class="img"/>
+          404 Not Found page
         </a>
-        <p style="margin: 0 auto"><a href="#" target="_blank" style="color: #9999FF; text-decoration: none;">404 Not Found page</a></p>
       </SlideIn>
       <br>
       <SlideIn>
-        <a href="#">
+        <a href="#" target="_blank">
           <div class="img2" />
+          This page
         </a>
-        <p style="margin: 0 auto"><a href="#" target="_blank" style="color: #9999FF; text-decoration: none;">This page</a></p>
       </SlideIn>
       <br>
     </div>
@@ -95,26 +95,28 @@
       <div class="contact_area">
         ご質問、ご感想等、何かコメントがありましたらお気軽にお寄せください。
         <br>
-        <div class="contact_items">
-          <div class="item">
-            <label>Name</label>
-            <br>
-            <input type="text" name="name" class="name">
+        <form action="#">
+          <div class="contact_items">
+            <div class="item">
+              <label for="name">Name</label>
+              <br>
+              <input id="name" type="text" name="name" placeholder="山田太郎">
+            </div>
+            <div class="item">
+              <label for="email">Email</label>
+              <br>
+              <input id="email" type="email" name="mail" placeholder="sample@mail.co.jp">
+            </div>
+            <div class="item">
+              <label for="message">Message</label>
+              <br>
+              <textarea id="message" type="text" name="message" placeholder="コメントや感想などを記入ください"/>
+            </div>
           </div>
-          <div class="item">
-            <label>Email</label>
-            <br>
-            <input type="text" name="mail" class="mail">
+          <div class="submit">
+            <button type="submit">send</button>
           </div>
-          <div class="item">
-            <label>Message</label>
-            <br>
-            <textarea type="text" name="message" class="message" />
-          </div>
-        </div>
-        <div class="submit">
-          <button>send</button>
-        </div>
+        </form>
         <br>
         My twitter
         <br>
@@ -226,6 +228,8 @@
   }
   .works a{
     display: inline-block;
+    color: #9999FF;
+    text-decoration: none;
   }
   .skills {
     background: linear-gradient(to bottom, lightgoldenrodyellow, #FFEEFF);
@@ -286,8 +290,7 @@
     letter-spacing: .2em;
     font-size: 11pt;
   }
-  .contact_items .item .name,
-  .contact_items .item .mail{
+  .contact_items .item input{
     display: inline-block;
     width: 40%;
     font-size: 10pt;
@@ -389,7 +392,7 @@
   .scrolldown{
     position:absolute;
     bottom: 3%;
-    left: 3%;
+    left: 5%;
     animation: arrowmove 1s ease-in-out infinite;
     cursor: default;
   }
