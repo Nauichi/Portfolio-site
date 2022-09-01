@@ -212,7 +212,7 @@
             p_works: 1280,
             p_skills: 2100,
             p_contact: 2750,
-            p_contact2: 4000,
+            p_contact2: 4200,
         };
       },
       methods:{
