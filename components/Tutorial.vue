@@ -105,7 +105,7 @@
             </div>
           </div>
           <div class="submit">
-            <a href="InMaking.html" target="_blank" style="text-decoration: none;">
+            <a href="/InMaking.html" target="_blank" style="text-decoration: none;">
               <button>send</button>
             </a>
           </div>
