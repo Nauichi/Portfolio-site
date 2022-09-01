@@ -29,7 +29,7 @@
           </g>
     
           <g id="red-dot">
-            <line x1="325" y1="260" x2="325" y2="260" stroke="#FF5851" class="red-dot" @click="Scroll()"/>
+            <line x1="325" y1="260" x2="325" y2="260" stroke="#FF5851" class="red-dot" @click="Change()"/>
           </g>  
         </svg>
       </div>
@@ -39,13 +39,18 @@
 <script>
   export default {
     methods:{
+      Change(){
+        document.querySelector(".red-dot").addEventListener("click", function(){
+          document.querySelector(".red-dot").classList.add("is-Active");
+        });
+      },
       Scroll(){
         window.scrollBy({
           top: 700,
           left: 0,
           behavior: 'smooth'
         });
-      }
+      },
     }
   }
 </script>
@@ -296,6 +301,12 @@
     stroke-width: 44px;
     stroke-linecap: round;
     animation: red-dot-grow 8s ease-out forwards;
+
+    cursor: pointer;
+  }
+  .red-dot.is-Active{
+    transition: .8s;
+    transform: rotateX(100deg);
   }
   @keyframes red-dot-grow {
     0% {
