@@ -71,6 +71,9 @@ header .score {
     right: 0;
     bottom: 0;
 }
+a{
+    color: blue;
+}
 .main {
     width: 400px;
     border: 2px solid green;

@@ -3,18 +3,10 @@
   <div
     class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0"
   >
-    <nav class="nav">
-      <ul>
-        <li><a href="#Top">TOP</a></li>
-        <li><a href="#About">ABOUT</a></li>
-        <li><a href="#Works">WORKS</a></li>
-        <li><a href="#Skills">SKILLS</a></li>
-        <li><a href="#Contact">CONTACT</a></li>
-      </ul>
-    </nav>
+  <NaviMenu />
     <section id="Top" class="top">
       <TopPage />
-      <div class="scrolldown"><span>Scroll</span></div>
+      <div class="scrolldown" @click="Scroll()"><span>Scroll</span></div>
     </section>
     <div id="About" class="about">
       <h2>ABOUT</h2>
@@ -59,29 +51,29 @@
           <span><br>大学で一番初めに<br>習った</span>
         </div>
         <div class="circle">
-          html
+          HTML
           <span><br>大学で少し習った<br>404ページで使用</span>
         </div>
         <div class="circle">
-          css 
+          CSS
           <span><br>404ページで<br>初使用<br>まだ知らないことは多い</span>
         </div>
         <div class="circle">
-          java script 
+          JavaScript 
           <span><br>404ページで<br>初使用<br>まだ使いこなせていない</span>
         </div>
       </FadeIn>
       <FadeIn>
         <div class="circle">
-          vue.js 
+          Vue.js 
           <span><br>このportfolioで<br>初使用<br>まだ慣れていない</span>
         </div>
         <div class="circle">
-          python 
+          Python 
           <span><br>学校で習った程度</span>
         </div>
         <div class="circle">
-          mysql
+          MySQL
           <span><br>学校で習った程度</span>
         </div>
         <div class="circle">
@@ -95,7 +87,6 @@
       <div class="contact_area">
         ご質問、ご感想等、何かコメントがありましたらお気軽にお寄せください。
         <br>
-        <form action="#">
           <div class="contact_items">
             <div class="item">
               <label for="name">Name</label>
@@ -114,9 +105,10 @@
             </div>
           </div>
           <div class="submit">
-            <button type="submit">send</button>
+            <a href="InMaking.html" target="_blank" style="text-decoration: none;">
+              <button>send</button>
+            </a>
           </div>
-        </form>
         <br>
         My twitter
         <br>
@@ -144,48 +136,6 @@
 </template>
 
 <style>
-  nav {
-    width: 100%;
-    height: 50px;
-    top: 0;
-    background-color: dimgray;
-    padding-top: 5px;
-    box-sizing: border-box;
-    position: fixed;
-    z-index: 500;
-  }
-  ul {
-    display: flex;
-    justify-content: right;
-    align-items: right;
-    list-style: none;
-  }
-  nav li {
-    list-style: none;
-    cursor: pointer;
-  }
-  nav a{
-    display: inline-block;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    margin-right: 35px;
-  }
-  nav a:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: white;
-    transform: translate(-100%, 0);
-    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
-    content: "";
-  }
-  nav a:hover:after {
-    transform: translate(0, 0);
-  }
   .top {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -196,6 +146,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 30px;
+    cursor: default;
 
     color: black;
     text-align: center;
@@ -214,6 +165,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 30px;
+    cursor: default;
 
     color: black;
     text-align: center;
@@ -236,6 +188,7 @@
     padding-top: 40px;
     padding-bottom: 80px;
     padding-left: 30px;
+    cursor: default;
 
     color: black;
     text-align: center;
@@ -253,6 +206,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 30px;
+    cursor: default;
 
     color: black;
     text-align: center;
@@ -281,9 +235,9 @@
   }
   .contact_items .item{
     padding: 5px;
-    width: 100%;
+    width: 80%;
     text-align: left;
-    padding-left: 15%;
+    padding-left: 20%;
   }
   .contact_items .item label{
     margin-bottom: 5px;
@@ -356,12 +310,25 @@
     height: 254px;
     background-image: url("./404.png");
     margin: 0 auto;
+
+    transition: all 0.5s ease 0s;
+  }
+  .img:hover{
+    -webkit-box-shadow: 0 0 20px -3px rgb(16 39 59 / 78%);
+    box-shadow: 0 0 20px -3px rgb(16 39 59 / 78%);
   }
   .img2{
     width: 250px;
     height: 250px;
-    background-color: white;
+    background: center;
+    background-image: url("./MyPortfolio.png");
     margin: 0 auto;
+
+    transition: all 0.5s ease 0s;
+  }
+  .img2:hover{
+    -webkit-box-shadow: 0 0 20px -3px rgb(16 39 59 / 78%);
+    box-shadow: 0 0 20px -3px rgb(16 39 59 / 78%);
   }
   .circle{
     position: relative;
@@ -376,6 +343,11 @@
     font-size: 30px;
     font-family: cursive;
     margin: 10px auto;
+
+	  transition: all 0.5s ease 0s;
+  }
+  .circle:hover{
+    transform: scale(1.1, 1.1);
   }
   .circle span{
     position: absolute;
@@ -391,10 +363,10 @@
   }
   .scrolldown{
     position:absolute;
-    bottom: 3%;
+    bottom: 1%;
     left: 5%;
     animation: arrowmove 1s ease-in-out infinite;
-    cursor: default;
+    cursor: pointer;
   }
   .scrolldown span{
     position: absolute;
@@ -431,20 +403,22 @@
   }
   @keyframes arrowmove{
     0%{
-      bottom: 3%;
+      bottom: 1%;
     }
     50%{
-      bottom: 5%;
-    }
-    100%{
       bottom: 3%;
     }
+    100%{
+      bottom: 1%;
+    }
   }
+  
 </style>
 
 <script>
 import SquareBox from './SquareBox.vue';
 import TopPage from './TopPage.vue';
+import NaviMenu from './NaviMenu.vue';
 export default {
     name: "NuxtTutorial",
     data() {
@@ -455,7 +429,15 @@ export default {
             },
         };
     },
-    methods: {},
-    components: { SquareBox, TopPage }
+    methods: {
+      Scroll(){
+        window.scrollBy({
+          top: 700,
+          left: 0,
+          behavior: 'smooth'
+        });
+      },
+    },
+    components: { SquareBox, TopPage, NaviMenu }
 }
 </script>

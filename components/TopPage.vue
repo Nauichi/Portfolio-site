@@ -29,7 +29,7 @@
           </g>
     
           <g id="red-dot">
-            <line x1="325" y1="260" x2="325" y2="260" stroke="#FF5851" class="red-dot" />
+            <line x1="325" y1="260" x2="325" y2="260" stroke="#FF5851" class="red-dot" @click="Scroll()"/>
           </g>  
         </svg>
       </div>
@@ -37,7 +37,17 @@
 </template>
 
 <script>
-
+  export default {
+    methods:{
+      Scroll(){
+        window.scrollBy({
+          top: 700,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
 </script>
 
 <style>
