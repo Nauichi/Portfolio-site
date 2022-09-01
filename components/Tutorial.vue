@@ -374,7 +374,7 @@
     bottom:12px;
     color: black;
     font-size: 0.7rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
 
     -ms-writing-mode: tb-rl;
     -webkit-writing-mode: vertical-rl;
@@ -386,7 +386,7 @@
     bottom: 0;
     right: -6px;
 
-    width: 1px;
+    width: 2px;
     height: 20px;
     background: black;
     transform: skewX(-31deg);
@@ -397,7 +397,7 @@
     bottom:0;
     right:0;
 
-    width:1px;
+    width:2px;
     height: 50px;
     background: black;
   }

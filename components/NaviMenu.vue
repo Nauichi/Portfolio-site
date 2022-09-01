@@ -62,7 +62,7 @@
     width: 100%;
     height: 1px;
     background-color: white;
-    transform: translate(-100%, 0);
+    transform: translate(-101%, 0);
     transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
     content: "";
   }
@@ -212,7 +212,7 @@
             p_works: 1280,
             p_skills: 2100,
             p_contact: 2750,
-            p_contact2: 4200,
+            p_contact2: 4500,
         };
       },
       methods:{
