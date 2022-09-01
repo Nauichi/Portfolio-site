@@ -20,7 +20,7 @@
                 <li class="menu__item"><a @click="ChangeScroll(p_about)">ABOUT</a></li>
                 <li class="menu__item"><a @click="ChangeScroll(p_works)">WORKS</a></li>
                 <li class="menu__item"><a @click="ChangeScroll(p_skills)">SKILLS</a></li>
-                <li class="menu__item"><a @click="ChangeScroll(p_contact)">CONTACT</a></li>
+                <li class="menu__item"><a @click="ChangeScroll(p_contact2)">CONTACT</a></li>
             </div>
         </div>
     </div>
@@ -212,7 +212,7 @@
             p_works: 1280,
             p_skills: 2100,
             p_contact: 2750,
-            p_contact2: 4500,
+            p_contact2: 4000,
         };
       },
       methods:{
