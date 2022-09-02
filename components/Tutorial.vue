@@ -462,7 +462,7 @@
     }
   }
   .sizuku {
-    animation: sizuku 1s linear 0s;
+    animation: sizuku .3s linear 0s;
     background-color: #D0B0FF;
     border-radius: 50%;
     border: 4px solid #D0B0FF;
@@ -477,10 +477,10 @@
         width: 0;
     }
     100% {
-        height: 130px;
+        height: 120px;
         opacity: 0;
-        transform: translate(-65px, -65px);
-        width: 130px;
+        transform: translate(-60px, -60px);
+        width: 120px;
     }
 }
 </style>
