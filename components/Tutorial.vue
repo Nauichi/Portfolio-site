@@ -430,9 +430,9 @@
   }
   .sizuku {
     animation: sizuku 1s linear 0s;
-    background-color: #B1F9D0;
+    background-color: #D0B0FF;
     border-radius: 50%;
-    border: 4px solid #B1F9D0;
+    border: 4px solid #D0B0FF;
     position: absolute;
     z-index: 1000;
   }
