@@ -22,9 +22,7 @@
           <br>
           いろいろな経験をしたい。
         </p>
-        <div style="display: inline-block">
-          <SquareBox pColor="#e1e1ac9e" sColor="rgba(200, 200, 239, 0.662)" />
-        </div>
+        <EmojiAnime />
     </div>
     <div id="Works" class="works">
       <h2>WORKS</h2>
@@ -277,12 +275,12 @@
     margin: 0 auto;
     max-width: 240px;
     padding: 10px 25px;
-    color: #543618;
+    color: #00CC66;
     transition: 0.3s ease-in-out;
     font-weight: 600;
     background: #eeee;
     border-radius: 50px;
-    border: 0.2rem solid #543618;
+    border: 0.2rem solid #009966;
     box-shadow: 0.2rem 0.2rem 0px 0.1rem #cccccc;
     cursor: pointer;
   }
@@ -290,8 +288,8 @@
     content: '';
     width: 5px;
     height: 5px;
-    border-top: 3px solid #543618;
-    border-right: 3px solid #543618;
+    border-top: 3px solid #009966;
+    border-right: 3px solid #009966;
     transform: rotate(45deg) translateY(-50%);
     position: absolute;
     top: 50%;
@@ -412,13 +410,12 @@
       bottom: 1%;
     }
   }
-  
 </style>
 
 <script>
-import SquareBox from './SquareBox.vue';
 import TopPage from './TopPage.vue';
 import NaviMenu from './NaviMenu.vue';
+import EmojiAnime from './EmojiAnime.vue';
 export default {
     name: "NuxtTutorial",
     data() {
@@ -438,6 +435,6 @@ export default {
         });
       },
     },
-    components: { SquareBox, TopPage, NaviMenu }
+    components: { TopPage, NaviMenu, EmojiAnime }
 }
 </script>
