@@ -197,7 +197,7 @@
     font-size: 20px;
     padding-left:20px;
     padding-right:20px;
-    font-family: "HGS行書体", "Georgia-Italic";
+    font-family: "HGS行書体", "Georgia-BoldItalic";
   }
   .introduce_area::before{
     transform: skewX(-20deg);
