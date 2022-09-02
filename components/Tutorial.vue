@@ -428,6 +428,28 @@
       bottom: 1%;
     }
   }
+  .sizuku {
+    animation: sizuku 1s linear 0s;
+    background-color: #B1F9D0;
+    border-radius: 50%;
+    border: 4px solid #B1F9D0;
+    position: absolute;
+    z-index: 1000;
+  }
+  @keyframes sizuku {
+    0% {
+        height: 0; 
+        opacity: 1;
+        transform: translate(0, 0);
+        width: 0;
+    }
+    100% {
+        height: 200px;
+        opacity: 0;
+        transform: translate(-100px, -100px);
+        width: 200px;
+    }
+}
 </style>
 
 <script>
@@ -444,6 +466,25 @@ export default {
                 month: 5,
             },
         };
+    },
+    mounted(){
+      document.body.addEventListener("click", drop, false);
+
+      function drop(e) {
+        const x = e.pageX;
+        const y = e.pageY;
+
+        const sizuku = document.createElement("div");
+        sizuku.style.top = y + "px";
+        sizuku.style.left = x + "px";
+        document.body.appendChild(sizuku);
+
+        sizuku.className = "sizuku";
+
+        sizuku.addEventListener("animationend", function() {
+            this.parentNode.removeChild(this);
+        }, false);
+      }
     },
     methods: {
       Scroll(){
