@@ -189,12 +189,15 @@
     text-align: center;
     margin: 10px auto;
     max-width: 500px;
-    height: 210px;
-    padding-top: 10px;
+    max-height: 210px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
     color: rgb(65, 65, 65);
     font-size: 20px;
     padding-left:20px;
-    padding-right:20px
+    padding-right:20px;
+    font-family: "HGS行書体", "Georgia-Italic";
   }
   .introduce_area::before{
     transform: skewX(-20deg);
