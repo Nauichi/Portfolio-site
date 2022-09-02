@@ -130,10 +130,24 @@
         </a>
       </div>
     </div>
+    <div class="footer">
+      &copy; 2022 nauichi
+    </div>
   </div>
 </template>
 
 <style>
+  .footer{
+    position: fixed;
+    bottom: 0;
+    text-align: right;
+    z-index: 1;
+    width: 100%;
+    height: 4vh;
+
+    color: white;
+    background-color: rgba(105, 105, 105, 0.75);
+  }
   .top {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -416,6 +430,7 @@
 import TopPage from './TopPage.vue';
 import NaviMenu from './NaviMenu.vue';
 import EmojiAnime from './EmojiAnime.vue';
+import FadeIn from './FadeIn.vue';
 export default {
     name: "NuxtTutorial",
     data() {
@@ -435,6 +450,6 @@ export default {
         });
       },
     },
-    components: { TopPage, NaviMenu, EmojiAnime }
+    components: { TopPage, NaviMenu, EmojiAnime, FadeIn }
 }
 </script>
