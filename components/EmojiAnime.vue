@@ -17,19 +17,19 @@
   }
   .c-person {
 	animation: c-rage var(--dur) linear infinite
-}
-.c-table {
+  }
+  .c-table {
 	animation: c-tableSpin var(--dur) linear infinite;
 	transform-origin: 50% 33%;
-}
-@keyframes c-rage {
+  }
+  @keyframes c-rage {
 	from,10%,20%,30%,40%,50%,60%,70%,80%,90%,to{transform: translateX(0)}
 	5%,15%,25%,35%,45%,55%,65%,75%,85%,95%{transform: translateX(-5%)}
-}
-@keyframes c-tableSpin {
+  }
+  @keyframes c-tableSpin {
 	from {transform: rotate(0)}
 	to {transform: rotate(2turn)}
-}
+  }
 </style>
 
 <script>

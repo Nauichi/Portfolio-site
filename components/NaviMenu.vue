@@ -32,7 +32,7 @@
     height: 50px;
     top: 0;
     background-color: dimgray;
-    padding-top: 5px;
+    padding-top: 12px;
     box-sizing: border-box;
     position: fixed;
     z-index: 500;
@@ -159,7 +159,7 @@
   .menu__item{
     width: 100%;
     height: auto;
-    padding: .5em 1em;
+    padding: .3em 1em;
     color: #fff;
     box-sizing: border-box;
     list-style: none;
