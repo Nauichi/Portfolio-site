@@ -168,7 +168,7 @@
     text-align: center;
     vertical-align: center;
     font-size: 25px;
-    font-family: cursive;
+    font-family: "Segoe Script", "SavoyeLetPlain";
   }
   .about h2{
     color: blue;
@@ -186,7 +186,7 @@
     color: black;
     text-align: center;
     font-size: 20px;
-    font-family: cursive;
+    font-family: "Segoe Script", "SavoyeLetPlain";
   }
   .works h2{
     color: blueviolet;
@@ -209,7 +209,7 @@
     color: black;
     text-align: center;
     font-size: 20px;
-    font-family: cursive;
+    font-family: "Segoe Script", "SavoyeLetPlain";
   }
   .skills h2{
     color: red;
@@ -227,7 +227,7 @@
     color: black;
     text-align: center;
     font-size: 20px;
-    font-family: cursive;
+    font-family: "Segoe Script", "SavoyeLetPlain";
   }
   .contact h2{
     color: green;
