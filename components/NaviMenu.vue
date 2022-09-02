@@ -209,9 +209,9 @@
             open: false,
             p_top: 0,
             p_about: 670,
-            p_works: 1260,
-            p_skills: 2040,
-            p_contact: 2630,
+            p_works: 1230,
+            p_skills: 2010,
+            p_contact: 2590,
             p_contact2: 3900,
         };
       },
