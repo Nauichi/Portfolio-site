@@ -10,7 +10,7 @@
 	  --dur: 1s;
 	  --color1: #17181c;
 	  --color2: #e3e4e8;
-	  font-size: calc(12px + (36 - 12) * (100vw - 320px) / (1280 - 320));
+	  font-size: calc(20px + (38 - 20) * (100vw - 320px) / (1280 - 320));
     font-family: "MS Pゴシック";
   }
   .c span {
