@@ -161,7 +161,7 @@
     background: linear-gradient(to bottom, white, lightcyan);
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 30px;
+    padding-left: 4vh;
     cursor: default;
 
     color: black;
@@ -180,7 +180,7 @@
     background: linear-gradient(to bottom, lightcyan, lightgoldenrodyellow);
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 30px;
+    padding-left: 4vh;
     cursor: default;
 
     color: black;
@@ -203,7 +203,7 @@
     background: linear-gradient(to bottom, lightgoldenrodyellow, #FFEEFF);
     padding-top: 40px;
     padding-bottom: 80px;
-    padding-left: 30px;
+    padding-left: 4vh;
     cursor: default;
 
     color: black;
@@ -221,7 +221,7 @@
     background: linear-gradient(to bottom, #FFEEFF, #CCFFCC);
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 30px;
+    padding-left: 4vh;
     cursor: default;
 
     color: black;
