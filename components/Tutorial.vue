@@ -17,12 +17,24 @@
         <b>Birthday :</b>  {{Birthdate.month}}/{{Birthdate.day}}
         <br>
         <b>Hobby  :</b>  Game・Music
-        <p style="color: blue;">
-          学生。プログラミングは勉強中。
+        <FadeIn>
+        <div class="introduce_area">
+          大学生
           <br>
-          いろいろな経験をしたい。
-        </p>
-        <EmojiAnime />
+          プログラミング等は勉強中
+          <br>
+          ゲームはやるのも見るのも好き
+          <br>
+          音楽はよくボカロ曲を聴く
+          <br>
+          ベースやピアノも弾ける
+          <br>
+          いろいろな経験をしたい!!
+          <br>
+        </div>
+        </FadeIn>
+        <SlideIn>
+        <EmojiAnime /></SlideIn>
     </div>
     <div id="Works" class="works">
       <h2>WORKS</h2>
@@ -175,6 +187,30 @@
     text-align: left;
     font-size: calc(30px + (40 - 30) * (100vw - 320px) / (1280 - 320));
     font-family: serif;
+  }
+  .introduce_area{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 10px auto;
+    width: 450px;
+    height: 210px;
+    padding-top: 10px;
+    color: rgb(146, 146, 146);
+    font-size: 20px;
+  }
+  .introduce_area::before{
+    transform: skewX(-30deg);
+    content: "";
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color:#00fbff90;
+    border: double 4px blue;
+
   }
   .works {
     background: linear-gradient(to bottom, lightcyan, lightgoldenrodyellow);
@@ -457,6 +493,7 @@ import TopPage from './TopPage.vue';
 import NaviMenu from './NaviMenu.vue';
 import EmojiAnime from './EmojiAnime.vue';
 import FadeIn from './FadeIn.vue';
+import SlideIn from './SlideIn.vue';
 export default {
     name: "NuxtTutorial",
     data() {
@@ -495,6 +532,6 @@ export default {
         });
       },
     },
-    components: { TopPage, NaviMenu, EmojiAnime, FadeIn }
+    components: { TopPage, NaviMenu, EmojiAnime, FadeIn, SlideIn }
 }
 </script>
