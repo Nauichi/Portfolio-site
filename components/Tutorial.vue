@@ -444,10 +444,10 @@
         width: 0;
     }
     100% {
-        height: 200px;
+        height: 130px;
         opacity: 0;
-        transform: translate(-100px, -100px);
-        width: 200px;
+        transform: translate(-65px, -65px);
+        width: 130px;
     }
 }
 </style>
