@@ -6,7 +6,7 @@
 
 <style>
   .c {
-    padding-top: 5px;
+    padding-top: 12px;
 	  --dur: 1s;
 	  --color1: #17181c;
 	  --color2: #e3e4e8;
