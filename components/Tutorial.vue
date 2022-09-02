@@ -19,16 +19,11 @@
         <b>Hobby  :</b>  Game・Music
         <FadeIn>
         <div class="introduce_area">
-          大学生
-          <br>
-          プログラミング等は勉強中
-          <br>
-          ゲームはやるのも見るのも好き
-          <br>
-          音楽はよくボカロ曲を聴く
-          <br>
-          ベースやピアノも弾ける
-          <br>
+          大学生<br>
+          プログラミング等は勉強中<br>
+          ゲームはやるのも見るのも好き<br>
+          音楽はよくボカロ曲を聴く<br>
+          ベースやピアノも弾ける<br>
           いろいろな経験をしたい!!
           <br>
         </div>
@@ -193,14 +188,16 @@
     z-index: 1;
     text-align: center;
     margin: 10px auto;
-    width: 450px;
+    max-width: 500px;
     height: 210px;
     padding-top: 10px;
-    color: rgb(146, 146, 146);
+    color: rgb(65, 65, 65);
     font-size: 20px;
+    padding-left:20px;
+    padding-right:20px
   }
   .introduce_area::before{
-    transform: skewX(-30deg);
+    transform: skewX(-20deg);
     content: "";
     position: absolute;
     top: 0; 
@@ -208,7 +205,7 @@
     left: 0;
     right: 0;
     z-index: -1;
-    background-color:#00fbff90;
+    background-color: rgb(205, 241, 253);
     border: double 4px blue;
 
   }
