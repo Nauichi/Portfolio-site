@@ -357,7 +357,7 @@
     line-height: 70px;
     color: black;
     font-size: 30px;
-    font-family: cursive;
+    font-family: "Segoe Script", "SavoyeLetPlain";
     margin: 10px auto;
 
 	  transition: all 0.5s ease 0s;
@@ -375,7 +375,7 @@
     text-align:center;
     color: black;
     font-size: 17px;
-    font-family: cursive;
+    font-family: "Segoe Script", "SavoyeLetPlain";
   }
   .scrolldown{
     position:absolute;

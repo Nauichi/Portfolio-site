@@ -208,10 +208,10 @@
         return {
             open: false,
             p_top: 0,
-            p_about: 700,
-            p_works: 1280,
-            p_skills: 2100,
-            p_contact: 2750,
+            p_about: 670,
+            p_works: 1100,
+            p_skills: 1900,
+            p_contact: 2480,
             p_contact2: 3900,
         };
       },
