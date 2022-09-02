@@ -173,7 +173,7 @@
   .about h2{
     color: blue;
     text-align: left;
-    font-size: 40px;
+    font-size: calc(30px + (40 - 30) * (100vw - 320px) / (1280 - 320));
     font-family: serif;
   }
   .works {
