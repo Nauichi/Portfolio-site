@@ -41,6 +41,13 @@
       </SlideIn>
       <br>
       <SlideIn>
+        <a href="IoT_browser.html" target="_blank">
+          <div class="img3" />
+          Microbit使用IoT体験
+        </a>
+      </SlideIn>
+      <br>
+      <SlideIn>
         <a href="#" target="_blank">
           <div class="img2" />
           This page
@@ -379,6 +386,19 @@
     transition: all 0.5s ease 0s;
   }
   .img2:hover{
+    -webkit-box-shadow: 0 0 20px -3px rgb(16 39 59 / 78%);
+    box-shadow: 0 0 20px -3px rgb(16 39 59 / 78%);
+  }
+  .img3{
+    width: 250px;
+    height: 250px;
+    background: center;
+    background-color: white;
+    margin: 0 auto;
+
+    transition: all 0.5s ease 0s;
+  }
+  .img3:hover{
     -webkit-box-shadow: 0 0 20px -3px rgb(16 39 59 / 78%);
     box-shadow: 0 0 20px -3px rgb(16 39 59 / 78%);
   }

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <title>IoT Block Breaker</title>
+  <style>
+    body{
+      background: radial-gradient(white, lightblue);
+    }
+    .breakout {
+      text-align: center;
+      margin: 0 auto;
+      font-family: "Ink Free", "Papyrus";
+      font-size: 15px;
+    }
+    canvas {
+      background: #000;
+      display: block;
+      border: solid 1.0px #eeeeee;
+      margin: 0 auto;
+    }
+    .btn {
+      background: #6bb6ff;
+      border-radius: 3px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 240px;
+      padding: 10px 5px;
+      color: #003067;
+      transition: 0.3s ease-in-out;
+      font-weight: 600;
+      border: 2px solid #000;
+      z-index: 1;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      border: 2px solid #000;
+      border-radius: 5px;
+      background: #e1f3ff;
+      background-image:
+      linear-gradient(45deg, #c8e4ff 25%, transparent 0),
+      linear-gradient(45deg, transparent 75%, #c8e4ff 0),
+      linear-gradient(45deg, #c8e4ff 25%, transparent 0),
+      linear-gradient(45deg, transparent 75%, #c8e4ff 0);
+      background-position: 0 0, 15px 15px, 15px 15px, 30px 30px;
+      background-size: 30px 30px;
+    }
+    .btn:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      -webkit-transform: translate3d(0,0.40rem,-1rem);
+      transform: translate3d(0,0.40rem,-1rem);
+      border: 2px solid #000;
+      border-radius: inherit;
+      background: #2b7fde;
+      -webkit-box-shadow: 0 0.6rem 0 0 rgb(0 0 0 / 20%);
+      box-shadow: 0 0.4rem 0 0 rgb(0 0 0 / 20%);
+      z-index: -2;
+    }
+    .btn:hover {
+      transform: translate3d(0,0.2rem,-1rem);
+    }
+    .btn:hover:after {
+      transform: translate3d(0,0.2rem,-1rem);
+      box-shadow: 0 0.2rem 0 0 rgb(0 0 0 / 20%);
+    }
+  </style>
+</head>
+<body>
+  <div class="breakout">
+    <header style="font-size: 8vh;">BREAKOUT</header>
+    <canvas id="canvas" width="450" height="450"></canvas>
+    <br>
+    <a id="start" onclick="gameButton();" class="btn">START</a>
+  </div>
+<script>
+  const ACCELEROMETER_SERVICE_UUID = 'e95d0753-251d-470a-a062-fa1922dfa9a8';
+  const ACCELEROMETER_CHARACTERISTICS_UUID = 'e95dca4b-251d-470a-a062-fa1922dfa9a8';
+  let angle = null;
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  var paddleHeight = 10;
+  var paddleWidth = 50;
+  var paddleOffsetBottom = 80;
+  var paddleX = (canvas.width-paddleWidth)/2;
+  var brickColumnCount = 14;
+  var brickRowCount = 6;
+  var brickColors = ["#FF99FF", "#FFFF77", "#C299FF"];
+  var brickWidth = 25;
+  var brickHeight = 10;
+  var brickPadding = 5;
+  var brickOffsetTop = 70;
+  var brickOffsetLeft = 20;
+  var ballRadius = 5;
+  var x = canvas.width/2;
+  var y = canvas.height-paddleOffsetBottom-brickHeight;
+  var dx = 3;
+  var dy = -3;
+  var score = 0;
+  var maxscore = 0;
+  for(var r=0; r<brickRowCount; r++) {
+    for(var c=0; c<brickColumnCount; c++) {
+      maxscore += 3-Math.floor(r/2);
+    }
+  }
+  var lives = 5;
+  var start_time;
+  var timer=0;
+
+  var addZero = function(value){
+    if (value<10) {
+      value = '00' + value;
+    }else if (value<100){
+      value = '0' + value;
+    }
+    return value;
+  }
+
+  function startTimer(){
+    start_time = new Date();
+    setInterval(goTimer, 10);
+  }
+
+  function goTimer(){
+    var milli = new Date() - start_time;
+    var seconds = Math.floor(milli / 1000);
+    seconds = addZero(seconds);
+    timer = seconds;
+
+    if (angle){
+			let move = 1.8;
+
+			if (angle > 0 && angle < 90){
+				move *= 1;
+			} if (angle > 90 && angle < 180){
+				move *= -1;
+			}
+
+			let x = 0;
+			if (x >= 0 && x + paddleWidth <= canvas.width){
+				paddleX += move;
+			}
+		}
+  }
+
+  var bricks = [];
+  for(var r=0; r<brickRowCount; r++) {
+    bricks[r] = [];
+    for(var c=0; c<brickColumnCount; c++) {
+      bricks[r][c] = { x: 0, y: 0, status: 1 };
+    }
+  }
+
+  function collisionDetection() {
+    for(var r=0; r<brickRowCount; r++) {
+      for(var c=0; c<brickColumnCount; c++) {
+        var b = bricks[r][c];
+        if(b.status == 1) {
+          if(x>b.x){
+            if (x<b.x+brickWidth){
+              if (y>b.y){
+                if (y<b.y+brickHeight){
+                  dy = -dy;
+                  if (Math.floor(Math.random() * Math.floor(8)) == 0){
+                    if (dy>0){
+                      dy += 1;
+                    }else{
+                      dy -= 1;
+                    }
+                  }
+                  b.status = 0;
+                  score+=3-Math.floor(r/2);
+
+                  if(score == maxscore) {
+                    alert("Congratulations!!\nYour Time is " + timer);
+                    document.location.reload();
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  function drawBall() {
+    ctx.beginPath();
+    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+    ctx.fillStyle = "#64F9C1";
+    ctx.fill();
+    ctx.closePath();
+  }
+  function drawPaddle() {
+    ctx.beginPath();
+    ctx.rect(paddleX, canvas.height-paddleHeight-paddleOffsetBottom, paddleWidth, paddleHeight);
+    ctx.fillStyle = "red";
+    ctx.fill();
+    ctx.closePath();
+  }
+  function drawBricks() {
+    for(var r=0; r<brickRowCount; r++) {
+      for(var c=0; c<brickColumnCount; c++) {
+        if(bricks[r][c].status == 1) {
+          var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+          var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+          bricks[r][c].x = brickX;
+          bricks[r][c].y = brickY;
+          ctx.beginPath();
+          ctx.rect(brickX, brickY, brickWidth, brickHeight);
+          ctx.fillStyle = brickColors[Math.floor(r/2)];
+          ctx.fill();
+          ctx.closePath();
+        }
+      }
+    }
+  }
+  function drawScore() {
+    ctx.font = "30px 'Comic Sans MS'";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillText(score, 30, 40);
+  }
+  function drawTime() {
+    ctx.font = "30px 'Comic Sans MS'";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillText(timer, canvas.width/2-30, 40);
+  }
+  function drawLives() {
+    ctx.font = "30px 'Comic Sans MS'";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillText(lives, canvas.width-65, 40);
+  }
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBricks();
+    drawBall();
+    drawPaddle();
+    drawScore();
+    drawTime();
+    drawLives();
+    collisionDetection();
+
+    if(x + dx>canvas.width-ballRadius || x + dx<ballRadius) {
+      dx = -dx;
+    }
+    if(y + dy<ballRadius) {
+      dy = -dy;
+    }
+    else if(y+dy>canvas.height-paddleOffsetBottom-ballRadius){
+      if (y+dy<canvas.height-paddleOffsetBottom-ballRadius+brickHeight) {
+        if(x>paddleX){
+          if(x<paddleX + paddleWidth){
+            dy = -dy;
+          }
+        }
+      }
+      if(y + dy>canvas.height-ballRadius){
+        lives--;
+        if(!lives) {
+          alert("GAME OVER");
+          document.location.reload();
+        }
+        else if(lives > 0){
+          x = canvas.width/2;
+          y = canvas.height-paddleOffsetBottom-brickHeight;
+          dx = 3;
+          dy = -3;
+          paddleX = (canvas.width-paddleWidth)/2;
+          alert("残りLife " + lives);
+        }
+      }
+    }
+
+    x += dx;
+    y += dy;
+    requestAnimationFrame(draw);
+  }
+
+  function setCanvas() {
+    drawBricks();
+    drawBall();
+    drawPaddle();
+    drawScore();
+    drawTime();
+    drawLives();
+  }
+
+  setCanvas();
+
+  function gameButton() {
+    console.log('connect');
+
+	  navigator.bluetooth.requestDevice({
+		  filters: [{
+			  namePrefix: 'BBC micro:bit'
+		  }],
+		  optionalServices: [ACCELEROMETER_SERVICE_UUID]
+	  })
+	  .then(device => {
+		  console.log(device);
+		  microbit = device;
+		  return device.gatt.connect();
+	  })
+	  .then(server => {
+		  console.log(server);
+		  return server.getPrimaryService(ACCELEROMETER_SERVICE_UUID);
+	  })
+	  .then(service => {
+		  console.log(service);
+		  return service.getCharacteristic(ACCELEROMETER_CHARACTERISTICS_UUID);
+	  })
+	  .then(characteristic => {
+      alert('接続しました。');
+		  console.log(characteristic);
+		  characteristic.startNotifications();
+		  characteristic.addEventListener('characteristicvaluechanged', accelerometerChanged);
+
+      draw();
+		  startTimer();
+    
+	  })
+	  .catch(error => {
+		  console.log(error);
+	  });
+
+    function accelerometerChanged(event){
+	    let accelX = event.target.value.getInt16(0, true)/1000.0;
+	    let accelY = event.target.value.getInt16(2, true)/1000.0;
+	    let accelZ = event.target.value.getInt16(4, true)/1000.0;
+
+	    angle = Math.atan2(accelZ, accelX) * (180.0 / Math.PI);
+	    if (accelZ > 0){
+		    angle = 360.0 - angle;
+	    }
+	    angle = Math.abs(angle);
+    }
+  }
+</script>
+
+</body>
+</html>
