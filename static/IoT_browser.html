@@ -190,7 +190,7 @@
                   score+=3-Math.floor(r/2);
 
                   if(score == maxscore) {
-                    alert("Congratulations!!\nYour Time is " + timer);
+                    alert("Congratulations!!\nお疲れさまでした\nYour Time is " + timer);
                     document.location.reload();
                   }
                 }
@@ -275,7 +275,7 @@
       if(y + dy>canvas.height-ballRadius){
         lives--;
         if(!lives) {
-          alert("GAME OVER");
+          alert("GAME OVER\n残念でした");
           document.location.reload();
         }
         else if(lives > 0){
