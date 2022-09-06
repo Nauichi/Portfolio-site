@@ -393,7 +393,7 @@
     width: 250px;
     height: 250px;
     background: center;
-    background-color: white;
+    background-image: url("./IoT.png");
     margin: 0 auto;
 
     transition: all 0.5s ease 0s;
