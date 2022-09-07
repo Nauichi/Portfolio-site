@@ -365,8 +365,9 @@
     transition: all 0.2s;
   }
   .img{
-    width: 293px;
-    height: 254px;
+    width: 300px;
+    height: 255px;
+    background: center;
     background-image: url("./404.png");
     margin: 0 auto;
 
@@ -377,8 +378,8 @@
     box-shadow: 0 0 20px -3px rgb(16 39 59 / 78%);
   }
   .img2{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 255px;
     background: center;
     background-image: url("./MyPortfolio.png");
     margin: 0 auto;
@@ -390,8 +391,8 @@
     box-shadow: 0 0 20px -3px rgb(16 39 59 / 78%);
   }
   .img3{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 255px;
     background: center;
     background-image: url("./IoT.png");
     margin: 0 auto;
