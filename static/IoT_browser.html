@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="ja">
 <head>
   <meta charset="utf-8" />
   <title>IoT Block Breaker</title>
@@ -12,6 +12,7 @@
       margin: 0 auto;
       font-family: "Ink Free", "Papyrus";
       font-size: 15px;
+      cursor: default;
     }
     canvas {
       background: #000;
@@ -20,8 +21,6 @@
       margin: 0 auto;
     }
     .btn {
-      background: #6bb6ff;
-      border-radius: 3px;
       position: relative;
       display: flex;
       justify-content: center;
@@ -29,7 +28,8 @@
       margin: 0 auto;
       max-width: 240px;
       padding: 10px 5px;
-      color: #003067;
+      color: red;
+      font-family: "HGS創英角ﾎﾟｯﾌﾟ体", "Futura-Bold";
       transition: 0.3s ease-in-out;
       font-weight: 600;
       border: 2px solid #000;
@@ -45,12 +45,12 @@
       z-index: -1;
       border: 2px solid #000;
       border-radius: 5px;
-      background: #e1f3ff;
+      background: #CEF9DC;
       background-image:
-      linear-gradient(45deg, #c8e4ff 25%, transparent 0),
-      linear-gradient(45deg, transparent 75%, #c8e4ff 0),
-      linear-gradient(45deg, #c8e4ff 25%, transparent 0),
-      linear-gradient(45deg, transparent 75%, #c8e4ff 0);
+      linear-gradient(45deg, #9BF9CC 25%, transparent 0),
+      linear-gradient(45deg, transparent 75%, #9BF9CC 0),
+      linear-gradient(45deg, #9BF9CC 25%, transparent 0),
+      linear-gradient(45deg, transparent 75%, #9BF9CC 0);
       background-position: 0 0, 15px 15px, 15px 15px, 30px 30px;
       background-size: 30px 30px;
     }
@@ -67,7 +67,7 @@
       transform: translate3d(0,0.40rem,-1rem);
       border: 2px solid #000;
       border-radius: inherit;
-      background: #2b7fde;
+      background: #00F9A9;
       -webkit-box-shadow: 0 0.6rem 0 0 rgb(0 0 0 / 20%);
       box-shadow: 0 0.4rem 0 0 rgb(0 0 0 / 20%);
       z-index: -2;
@@ -101,15 +101,18 @@
   var paddleWidth = 50;
   var paddleOffsetBottom = 80;
   var paddleX = (canvas.width-paddleWidth)/2;
-  var brickColumnCount = 14;
+
+  var brickColumnCount = 11;
   var brickRowCount = 6;
-  var brickColors = ["#FF99FF", "#FFFF77", "#C299FF"];
-  var brickWidth = 25;
+  var brickColors = ["#FF99FF", "#FFFF77", "#C299FF", "#FFC7AF"];
+  var brickWidth = 30;
   var brickHeight = 10;
-  var brickPadding = 5;
+  var brickPadding = 8;
   var brickOffsetTop = 70;
   var brickOffsetLeft = 20;
+
   var ballRadius = 5;
+  
   var x = canvas.width/2;
   var y = canvas.height-paddleOffsetBottom-brickHeight;
   var dx = 3;
@@ -118,7 +121,7 @@
   var maxscore = 0;
   for(var r=0; r<brickRowCount; r++) {
     for(var c=0; c<brickColumnCount; c++) {
-      maxscore += 3-Math.floor(r/2);
+      maxscore += brickRowCount - r;
     }
   }
   var lives = 5;
@@ -154,8 +157,7 @@
 				move *= -1;
 			}
 
-			let x = 0;
-			if (x >= 0 && x + paddleWidth <= canvas.width){
+			if (move + paddleX >= 0 && move + paddleX <= canvas.width - paddleWidth){
 				paddleX += move;
 			}
 		}
@@ -187,7 +189,7 @@
                     }
                   }
                   b.status = 0;
-                  score+=3-Math.floor(r/2);
+                  score += brickRowCount - r;
 
                   if(score == maxscore) {
                     alert("Congratulations!!\nお疲れさまでした\nYour Time is " + timer);
@@ -205,7 +207,7 @@
   function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "#64F9C1";
+    ctx.fillStyle = "#33CCFF";
     ctx.fill();
     ctx.closePath();
   }
@@ -226,7 +228,11 @@
           bricks[r][c].y = brickY;
           ctx.beginPath();
           ctx.rect(brickX, brickY, brickWidth, brickHeight);
-          ctx.fillStyle = brickColors[Math.floor(r/2)];
+          var colornumber = Math.floor(c % 4 + r);
+          while(colornumber > 3){
+            colornumber -= 4;
+          }
+          ctx.fillStyle = brickColors[colornumber];
           ctx.fill();
           ctx.closePath();
         }
@@ -236,17 +242,17 @@
   function drawScore() {
     ctx.font = "30px 'Comic Sans MS'";
     ctx.fillStyle = "#ffffff";
-    ctx.fillText(score, 30, 40);
+    ctx.fillText(score, 20, 40);
   }
   function drawTime() {
     ctx.font = "30px 'Comic Sans MS'";
     ctx.fillStyle = "#ffffff";
-    ctx.fillText(timer, canvas.width/2-30, 40);
+    ctx.fillText(timer, canvas.width/2 - 20, 40);
   }
   function drawLives() {
     ctx.font = "30px 'Comic Sans MS'";
     ctx.fillStyle = "#ffffff";
-    ctx.fillText(lives, canvas.width-65, 40);
+    ctx.fillText(lives, canvas.width - 45, 40);
   }
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -258,15 +264,15 @@
     drawLives();
     collisionDetection();
 
-    if(x + dx>canvas.width-ballRadius || x + dx<ballRadius) {
+    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
       dx = -dx;
     }
-    if(y + dy<ballRadius) {
+    if(y + dy - 40 < ballRadius) {
       dy = -dy;
     }
-    else if(y+dy>canvas.height-paddleOffsetBottom-ballRadius){
-      if (y+dy<canvas.height-paddleOffsetBottom-ballRadius+brickHeight) {
-        if(x>paddleX){
+    else if(y + dy > canvas.height - paddleOffsetBottom - ballRadius){
+      if (y + dy < canvas.height - paddleOffsetBottom - ballRadius + brickHeight) {
+        if(x > paddleX){
           if(x<paddleX + paddleWidth){
             dy = -dy;
           }
@@ -343,7 +349,6 @@
 
     function accelerometerChanged(event){
 	    let accelX = event.target.value.getInt16(0, true)/1000.0;
-	    let accelY = event.target.value.getInt16(2, true)/1000.0;
 	    let accelZ = event.target.value.getInt16(4, true)/1000.0;
 
 	    angle = Math.atan2(accelZ, accelX) * (180.0 / Math.PI);
