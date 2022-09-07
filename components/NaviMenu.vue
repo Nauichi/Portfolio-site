@@ -210,8 +210,8 @@
             p_top: 0,
             p_about: 670,
             p_works: 1230,
-            p_skills: 2010,
-            p_contact: 2590,
+            p_skills: 2310,
+            p_contact: 2890,
             p_contact2: 3900,
         };
       },
