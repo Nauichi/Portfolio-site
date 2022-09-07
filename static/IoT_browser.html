@@ -102,14 +102,14 @@
   var paddleOffsetBottom = 80;
   var paddleX = (canvas.width-paddleWidth)/2;
 
-  var brickColumnCount = 11;
+  var brickColumnCount = 10;
   var brickRowCount = 6;
   var brickColors = ["#FF99FF", "#FFFF77", "#C299FF", "#FFC7AF"];
   var brickWidth = 30;
   var brickHeight = 10;
   var brickPadding = 8;
-  var brickOffsetTop = 70;
-  var brickOffsetLeft = 20;
+  var brickOffsetTop = 85;
+  var brickOffsetLeft = 39;
 
   var ballRadius = 5;
   
@@ -242,12 +242,12 @@
   function drawScore() {
     ctx.font = "30px 'Comic Sans MS'";
     ctx.fillStyle = "#ffffff";
-    ctx.fillText(score, 20, 40);
+    ctx.fillText(score, 25, 40);
   }
   function drawTime() {
     ctx.font = "30px 'Comic Sans MS'";
     ctx.fillStyle = "#ffffff";
-    ctx.fillText(timer, canvas.width/2 - 20, 40);
+    ctx.fillText(timer, canvas.width/2 - 15, 40);
   }
   function drawLives() {
     ctx.font = "30px 'Comic Sans MS'";
@@ -267,7 +267,7 @@
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
       dx = -dx;
     }
-    if(y + dy - 40 < ballRadius) {
+    if(y + dy - 42 < ballRadius) {
       dy = -dy;
     }
     else if(y + dy > canvas.height - paddleOffsetBottom - ballRadius){
