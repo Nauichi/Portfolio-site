@@ -491,7 +491,7 @@
     border-radius: 50%;
     border: 4px solid #D0B0FF;
     position: absolute;
-    z-index: 1000;
+    z-index: 300;
   }
   @keyframes sizuku {
     0% {
