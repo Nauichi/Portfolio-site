@@ -3,7 +3,6 @@
         <div class="gmenu">
             <nav class="nav">
                 <ul>
-                    <li><a href="/Presentation.html" target="_blank">Presen</a></li>
                     <li><a @click="ChangeScroll(p_top)">TOP</a></li>
                     <li><a @click="ChangeScroll(p_about)">ABOUT</a></li>
                     <li><a @click="ChangeScroll(p_works)">WORKS</a></li>
