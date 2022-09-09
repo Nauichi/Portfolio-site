@@ -23,13 +23,6 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/main.ico' }],
   },
-  head () {
-    return {
-      meta: [
-        { hid: 'og:url', property: 'og:url', content: 'https://portfolio-site-dw7.pages.dev/' + `${this.$route.path}` },
-      ],
-    }
-  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
