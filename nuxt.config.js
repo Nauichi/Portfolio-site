@@ -20,7 +20,7 @@ export default {
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'My_Portfolio-site' },
-      { hid: 'og:description', property: 'og:description', content: '僕個人のポートフォリオになります。学生時に実習で制作したもので拙いものですが、クリックエフェクトやアニメーションを入れてます。micro bitのゲームのrinkがありますが、これはbluetoothの加速度サービスを入れたmicro bitが無いと、プレイすることが出来ません。ご了承ください。' },
+      { hid: 'og:description', property: 'og:description', content: '僕個人のポートフォリオになります。学生時に実習で制作したもので拙いものですが、クリックエフェクトやアニメーションを入れてます。micro bitのゲームのlinkがありますが、これはbluetoothの加速度サービスを入れたmicro bitが無いと、プレイすることが出来ません。ご了承ください。' },
       { hid: 'og:image', property: 'og:image', content: '/samune.jpg' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
     ],
