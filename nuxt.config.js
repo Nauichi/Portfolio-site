@@ -18,7 +18,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
       { hid: 'og:type', property: 'og:type', content: 'article' },
       { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'My Portfolio-site' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'My_Portfolio-site' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/main.ico' }],
