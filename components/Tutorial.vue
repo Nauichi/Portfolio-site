@@ -74,7 +74,7 @@
           <div class="mask1" />
 	        <div class="mask2" />
 	        <div class="work_name">
-		        <p>これから増やしていく所存</p>
+		        <p>etc...<br>これから増やしていく所存</p>
 	        </div>
         </div>
       </SlideIn>
@@ -295,7 +295,7 @@
 	  visibility: visible;
   }
   .work_items .work_name p {
-	  padding-top: 120px;
+	  padding-top: 50%;
 	  opacity: 0;
   }
   .work_items:hover .work_name p {
