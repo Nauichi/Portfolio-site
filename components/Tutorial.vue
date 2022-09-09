@@ -275,8 +275,8 @@
   }
   .contact_area{
     margin: 10px auto;
-    padding: 30px 0;
-    max-width: 900px;
+    padding: 25px 0;
+    max-width: 800px;
     background-color: rgba(213, 236, 228, 0.75);
     -webkit-box-shadow: 0 0 40px -3px rgb(16 39 59 / 78%);
     box-shadow: 0 0 40px -3px rgb(16 39 59 / 78%);
