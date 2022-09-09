@@ -16,8 +16,21 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
+      { hid: 'og:type', property: 'og:type', content: 'profile' },
+      { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'My Portfolio-site' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'og:image', property: 'og:image', content: '/MyPortfolio.png' },
+      { hid: 'og:description', property: 'og:description', content: '私のポートフォリオです' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/main.ico' }],
+  },
+  head () {
+    return {
+      meta: [
+        { hid: 'og:url', property: 'og:url', content: 'https://portfolio-site-dw7.pages.dev/' + `${this.$route.path}` },
+      ],
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
