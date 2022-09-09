@@ -14,7 +14,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: '僕のポートフォリオ、見てってください' },
       { name: 'format-detection', content: 'telephone=no' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' },
