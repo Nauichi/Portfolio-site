@@ -21,7 +21,7 @@ export default {
       { hid: 'og:site_name', property: 'og:site_name', content: 'My_Portfolio-site' },
       { hid: 'og:url', property: 'og:url', content: 'MyPortfolio' },
       { hid: 'og:description', property: 'og:description', content: '僕のポートフォリオ、見てってください' },
-      { hid: 'og:image', property: 'og:image', content: '/MyPortfolio.png' },
+      { hid: 'og:image', property: 'og:image', content: '/mogura.png' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/main.ico' }],
