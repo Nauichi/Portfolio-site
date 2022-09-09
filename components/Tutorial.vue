@@ -47,9 +47,12 @@
           This page
         </a>
       </SlideIn>
+      <br>
       <SlideIn>
-        <SquareBox pColor="red" sColor="pink"/>
-        SquareBox
+        <div style="width: 300px;
+                    height: 255px;
+                    background: white" />
+        これから増やしていく所存
       </SlideIn>
       <br>
     </div>
@@ -519,7 +522,6 @@ import NaviMenu from './NaviMenu.vue';
 import EmojiAnime from './EmojiAnime.vue';
 import FadeIn from './FadeIn.vue';
 import SlideIn from './SlideIn.vue';
-import SquareBox from './SquareBox.vue';
 export default {
     name: "NuxtTutorial",
     data() {
@@ -558,6 +560,6 @@ export default {
         });
       },
     },
-    components: { TopPage, NaviMenu, EmojiAnime, FadeIn, SlideIn, SquareBox }
+    components: { TopPage, NaviMenu, EmojiAnime, FadeIn, SlideIn }
 }
 </script>
