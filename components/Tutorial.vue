@@ -35,24 +35,48 @@
       <h2>WORKS</h2>
       <SlideIn>
         <a href="Not.html" target="_blank">
-          <div class="img" />
-          404 Not Found page
+          <div class="work_items">
+            <img src="./404.png" />
+            <div class="mask1" />
+	          <div class="mask2" />
+	          <div class="work_name">
+		          <p>404 Not Found page</p>
+	          </div>
+          </div>
         </a>
         <a href="IoT_browser.html" target="_blank">
-          <div class="img3" />
-          Microbit使用IoT体験
+          <div class="work_items">
+            <img src="./IoT.png" />
+            <div class="mask1" />
+	          <div class="mask2" />
+	          <div class="work_name">
+		          <p>Microbit使用IoT体験</p>
+	          </div>
+          </div>
         </a>
         <a href="#" target="_blank">
-          <div class="img2" />
-          This page
+          <div class="work_items">
+            <img src="./MyPortfolio.png" />
+            <div class="mask1" />
+	          <div class="mask2" />
+	          <div class="work_name">
+		          <p>This page</p>
+	          </div>
+          </div>
         </a>
       </SlideIn>
       <br>
       <SlideIn>
-        <div style="width: 300px;
-                    height: 255px;
-                    background: white" />
-        これから増やしていく所存
+        <div class="work_items">
+          <div style="width: 300px;
+                      height: 255px;
+                      background: white" />
+          <div class="mask1" />
+	        <div class="mask2" />
+	        <div class="work_name">
+		        <p>これから増やしていく所存</p>
+	        </div>
+        </div>
       </SlideIn>
       <br>
     </div>
@@ -228,7 +252,7 @@
     padding-left: 4vh;
     cursor: default;
 
-    color: #9999FF;
+    color: #EAD9FF;
     text-align: center;
     font-size: 20px;
     font-family: "Segoe Script", "SavoyeLetPlain";
@@ -241,8 +265,63 @@
   }
   .works a{
     display: inline-block;
-    color: #9999FF;
+    color: #EAD9FF;
     text-decoration: none;
+  }
+  .works img{
+    width: 300px;
+    height: 255px;
+    object-fit: cover;
+  }
+  .work_items {
+	  width: 300px;
+	  height: 255px;
+	  overflow: hidden;
+	  margin: 10px 8px 10px 16px;
+	  position: relative;
+  }
+  .work_items .work_name {
+	  width: 100%;
+	  height: 100%;
+	  visibility: hidden;
+	  top: 0;
+	  left: 0;
+	  position: absolute;
+	  text-align: center;
+	  -webkit-transition:	all 0.4s step-end;
+	  transition: all 0.4s step-end;
+  }
+  .work_items:hover .work_name {
+	  visibility: visible;
+  }
+  .work_items .work_name p {
+	  padding-top: 120px;
+	  opacity: 0;
+  }
+  .work_items:hover .work_name p {
+	  opacity: 1;
+  }
+  .work_items .mask1,
+  .work_items .mask2 {
+	  width: 100%;
+	  height: 50%;
+	  position:	absolute;
+	  left: 0;
+	  background-color:	rgba(0,0,0,0.4);
+	  -webkit-transition:	all 0.4s ease;
+	  transition: all 0.4s ease;
+  }
+  .work_items .mask1 {
+	  top: -50%;
+  }
+  .work_items:hover .mask1 {
+	  top: 0;
+  }
+  .work_items .mask2 {
+	  bottom: -50%;
+  }
+  .work_items:hover .mask2 {
+	  bottom: 0;
   }
   .skills {
     background: linear-gradient(to bottom, lightgoldenrodyellow, #FFEEFF);
