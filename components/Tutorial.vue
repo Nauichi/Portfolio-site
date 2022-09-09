@@ -35,19 +35,13 @@
       <h2>WORKS</h2>
       <SlideIn>
         <a href="Not.html" target="_blank">
-          <div class="img"/>
+          <div class="img" />
           404 Not Found page
         </a>
-      </SlideIn>
-      <br>
-      <SlideIn>
         <a href="IoT_browser.html" target="_blank">
           <div class="img3" />
           Microbit使用IoT体験
         </a>
-      </SlideIn>
-      <br>
-      <SlideIn>
         <a href="#" target="_blank">
           <div class="img2" />
           This page
@@ -122,10 +116,10 @@
             </a>
           </div>
         <br>
+        <br>
         My twitter
         <br>
         <a href="https://twitter.com/g07_sh034ma" target="_blank">
-          <i class="fa fa-twitter" id="twitter"></i>
           <svg
             class="w-6 h-6 text-gray-600 hover:text-gray-800"
             xmlns="http://www.w3.org/2000/svg"
@@ -265,7 +259,6 @@
     background: linear-gradient(to bottom, #FFEEFF, #CCFFCC);
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 4vh;
     cursor: default;
 
     color: black;
@@ -278,6 +271,7 @@
     text-align: left;
     font-size: 40px;
     font-family: serif;
+    padding-left: 4vh;
   }
   .contact_area{
     margin: 10px auto;
@@ -374,6 +368,8 @@
     background: center;
     background-image: url("./404.png");
     margin: 0 auto;
+
+    text-align: center;
 
     transition: all 0.5s ease 0s;
   }
@@ -509,33 +505,6 @@
         opacity: 0;
         transform: translate(-60px, -60px);
         width: 120px;
-    }
-  }
-  @import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
-  #twitter{
-    font-size: 8em;
-    background-color: #18191f;
-    color: #fff;
-    box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
-      2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
-      inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
-      inset 2px 2px 10px #00000080;
-    border-radius: 29px;
-    padding: 11px 19px;
-    margin: 0 40px;
-    animation: animate 3s linear infinite;
-    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
-      0 0 200px #0072ff;
-  }
-  #twitter {
-    animation-delay: 0.3s;
-  }
-  @keyframes animate {
-    from {
-      filter: hue-rotate(0deg);
-    }
-    to {
-      filter: hue-rotate(360deg);
     }
   }
 </style>

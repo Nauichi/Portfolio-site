@@ -33,7 +33,6 @@
           </g>  
         </svg>
       </div>
-      
 </template>
 
 <script>

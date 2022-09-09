@@ -37,6 +37,8 @@
     .slidein {
         width: 100%;
         animation: slideIn 1.5s ease-out forwards;
+        display: flex;
+        justify-content: space-evenly;
     }
     @keyframes slideIn {
     0% {
