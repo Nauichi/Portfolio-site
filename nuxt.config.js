@@ -22,7 +22,7 @@ export default {
       { hid: 'og:site_name', property: 'og:site_name', content: 'My_Portfolio-site' },
       { hid: 'og:description', property: 'og:description', content: '僕個人のポートフォリオになります。学生時に実習で制作したもので拙いものですが、クリックエフェクトやアニメーションを入れてます。micro bitのゲームのrinkがありますが、これはbluetoothの加速度サービスを入れたmicro bitが無いと、プレイすることが出来ません。ご了承ください。' },
       { hid: 'og:image', property: 'og:image', content: '/samune.jpg' },
-      { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/main.ico' }],
   },
