@@ -47,6 +47,10 @@
           This page
         </a>
       </SlideIn>
+      <SlideIn>
+        <SquareBox pColor="red" sColor="pink"/>
+        SquareBox
+      </SlideIn>
       <br>
     </div>
     <div id="Skills" class="skills">
@@ -221,7 +225,7 @@
     padding-left: 4vh;
     cursor: default;
 
-    color: black;
+    color: #9999FF;
     text-align: center;
     font-size: 20px;
     font-family: "Segoe Script", "SavoyeLetPlain";
@@ -515,6 +519,7 @@ import NaviMenu from './NaviMenu.vue';
 import EmojiAnime from './EmojiAnime.vue';
 import FadeIn from './FadeIn.vue';
 import SlideIn from './SlideIn.vue';
+import SquareBox from './SquareBox.vue';
 export default {
     name: "NuxtTutorial",
     data() {
@@ -553,6 +558,6 @@ export default {
         });
       },
     },
-    components: { TopPage, NaviMenu, EmojiAnime, FadeIn, SlideIn }
+    components: { TopPage, NaviMenu, EmojiAnime, FadeIn, SlideIn, SquareBox }
 }
 </script>
