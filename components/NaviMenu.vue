@@ -116,6 +116,7 @@
     top: 6px;
     left: 23px;
     background: white;
+    transition: all 0.5s ease;
   }
   .home2:after{
     content: '';
@@ -128,7 +129,10 @@
     left: 6px;
     transform: scale(1,0.8) rotate(-45deg);
   }
-
+  span:hover .home2:before{
+    top: 2px;
+    height: 10px;
+  }
   @media screen and (max-width: 650px){
     .gmenu{
       display: none;
