@@ -526,7 +526,7 @@
   }
   .scrolldown{
     position:absolute;
-    bottom: 3%;
+    bottom: 4%;
     left: 5%;
     animation: arrowmove 1s ease-in-out infinite;
     cursor: pointer;
@@ -566,13 +566,13 @@
   }
   @keyframes arrowmove{
     0%{
-      bottom: 3%;
+      bottom: 4%;
     }
     50%{
-      bottom: 5%;
+      bottom: 6%;
     }
     100%{
-      bottom: 3%;
+      bottom: 4%;
     }
   }
   .sizuku {
