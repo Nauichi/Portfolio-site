@@ -195,13 +195,14 @@
   .top {
     padding-top: 40px;
     padding-bottom: 40px;
-    height: 600px;
+    height: 100vh;
   }
   .about {
     background: linear-gradient(to bottom, white, lightcyan);
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 4vh;
+    height: 100vh;
     cursor: default;
 
     color: black;
