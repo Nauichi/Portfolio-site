@@ -72,8 +72,6 @@
     transform: translate(0, 0);
   }
   .nav span{
-    height: 30px;
-    width: 30px;
     display: block;
     position: relative;
     cursor: pointer;
@@ -130,8 +128,8 @@
     transform: scale(1,0.8) rotate(-45deg);
   }
   span:hover .home2:before{
-    top: 2px;
-    height: 10px;
+    top: 1px;
+    height: 11px;
   }
   @media screen and (max-width: 650px){
     .gmenu{
