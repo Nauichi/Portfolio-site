@@ -139,10 +139,10 @@
     0% {
       stroke-dashoffset: 124px;
     }
-    2% {
+    3% {
       stroke-dashoffset: 124px;
     }
-    6% {
+    7% {
       stroke-dashoffset: 0px;
     }
     100% {
@@ -153,10 +153,10 @@
     0% {
       stroke-dashoffset: 47px;
     }
-    6% {
+    8% {
       stroke-dashoffset: 47px;
     }
-    11% {
+    14% {
       stroke-dashoffset: 0px;
     }
     100% {
@@ -167,10 +167,10 @@
     0% {
       stroke-dashoffset: 42px;
     }
-    8% {
+    11% {
       stroke-dashoffset: 42px;
     }
-    13% {
+    17% {
       stroke-dashoffset: 0px;
     }
     100% {
@@ -181,10 +181,10 @@
     0% {
       stroke-dashoffset: 47px;
     }
-    11% {
+    15% {
       stroke-dashoffset: 47px;
     }
-    16% {
+    21% {
       stroke-dashoffset: 0px;
     }
     100% {
@@ -206,10 +206,10 @@
     0% {
       stroke-dashoffset: 124px;
     }
-    2% {
+    6% {
       stroke-dashoffset: 124px;
     }
-    7% {
+    9% {
       stroke-dashoffset: 0px;
     }
     100% {
@@ -220,10 +220,10 @@
     0% {
       stroke-dashoffset: 44px;
     }
-    13% {
+    17% {
       stroke-dashoffset: 44px;
     }
-    18% {
+    20% {
       stroke-dashoffset: 0px;
     }
     100% {
@@ -245,10 +245,10 @@
     0% {
       stroke-dashoffset: 124px;
     }
-    3% {
+    7% {
       stroke-dashoffset: 124px;
     }
-    8% {
+    10% {
       stroke-dashoffset: 0px;
     }
     100% {
@@ -259,10 +259,10 @@
     0% {
       stroke-dashoffset: 44px;
     }
-    15% {
+    18% {
       stroke-dashoffset: 44px;
     }
-    20% {
+    21% {
       stroke-dashoffset: 0px;
     }
     100% {
@@ -279,10 +279,10 @@
     0% {
       stroke-dashoffset: 302px;
     }
-    4% {
+    9% {
       stroke-dashoffset: 302px;
     }
-    9% {
+    14% {
       stroke-dashoffset: 0px;
     }
     100% {
@@ -305,10 +305,10 @@
     0% {
       stroke-width: 0px;
     }
-    15% {
+    30% {
       stroke-width: 0px;
     }
-    20% {
+    40% {
       stroke-width: 44px;
     }
     100% {
