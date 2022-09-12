@@ -31,7 +31,7 @@
     width: 100%;
     height: 50px;
     top: 0;
-    background-color: dimgray;
+    background-color: rgba(80, 80, 80, 0.75);
     padding-top: 12px;
     box-sizing: border-box;
     position: fixed;
@@ -154,7 +154,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #555;
+    background: rgba(80, 80, 80, 0.75);
   }
   .menu__item{
     width: 100%;

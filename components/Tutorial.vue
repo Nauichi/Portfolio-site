@@ -190,7 +190,7 @@
     height: 4vh;
 
     color: white;
-    background-color: rgba(105, 105, 105, 0.75);
+    background-color: rgba(80, 80, 80, 0.75);
   }
   .top {
     padding-top: 40px;
@@ -592,6 +592,19 @@
         transform: translate(-60px, -60px);
         width: 120px;
     }
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 50, .5);
+    border-radius: 10px;
+    box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
   }
 </style>
 
