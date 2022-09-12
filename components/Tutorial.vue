@@ -204,7 +204,6 @@
     background: linear-gradient(to bottom, white, lightcyan);
     padding-top: 40px;
     padding-left: 4vh;
-    padding-bottom: 20px;
     min-height: 100vh;
     cursor: default;
 
@@ -252,7 +251,6 @@
   .works {
     background: linear-gradient(to bottom, lightcyan, lightgoldenrodyellow);
     padding-top: 40px;
-    padding-bottom: 40px;
     padding-left: 4vh;
     min-height: 100vh;
     cursor: default;
@@ -331,7 +329,6 @@
   .skills {
     background: linear-gradient(to bottom, lightgoldenrodyellow, #FFEEFF);
     padding-top: 40px;
-    padding-bottom: 80px;
     padding-left: 4vh;
     min-height: 100vh;
     cursor: default;
@@ -508,7 +505,7 @@
     color: black;
     font-size: 30px;
     font-family: "Segoe Script", "SavoyeLetPlain";
-    margin: 10px auto;
+    margin: 10px 5px;
 
 	  transition: all 0.5s ease 0s;
   }
