@@ -69,16 +69,18 @@
       </SlideIn>
       <br>
       <SlideIn>
-        <div class="work_items">
-          <div style="width: 300px;
-                      height: 255px;
-                      background: white" />
-          <div class="mask1" />
-	        <div class="mask2" />
-	        <div class="work_name">
-		        <p>etc...<br>これから増やしていく所存</p>
-	        </div>
-        </div>
+        <a @click="Hoge()">
+          <div class="work_items">
+            <div style="width: 300px;
+                        height: 255px;
+                        background: white;" />
+            <div class="mask1" />
+	          <div class="mask2" />
+	          <div class="work_name">
+		          <p>etc...<br>これから増やしていく所存</p>
+	          </div>
+          </div>
+        </a>
       </SlideIn>
       <br>
     </div>
@@ -270,6 +272,7 @@
     display: inline-block;
     color: #EAD9FF;
     text-decoration: none;
+    cursor: default;
   }
   .works img{
     width: 300px;
@@ -282,6 +285,7 @@
 	  overflow: hidden;
 	  margin: 10px 8px 10px 16px;
 	  position: relative;
+    cursor: pointer;
   }
   .work_items .work_name {
 	  width: 100%;
@@ -311,8 +315,8 @@
 	  position:	absolute;
 	  left: 0;
 	  background-color:	rgba(0,0,0,0.4);
-	  -webkit-transition:	all 0.4s ease;
-	  transition: all 0.4s ease;
+	  -webkit-transition:	all 0.3s ease;
+	  transition: all 0.3s ease;
   }
   .work_items .mask1 {
 	  top: -50%;
@@ -650,6 +654,9 @@ export default {
           behavior: 'smooth'
         });
       },
+      Hoge(){
+        alert("何もないよーんww");
+      }
     },
     components: { TopPage, NaviMenu, EmojiAnime, FadeIn, SlideIn }
 }
