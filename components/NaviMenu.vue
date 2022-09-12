@@ -119,8 +119,8 @@
     content: '';
     height: 18px;
     width: 18px;
-    border-top: 3px white solid;
-    border-right: 3px white solid;
+    border-top: 4px white solid;
+    border-right: 4px white solid;
     position: absolute;
     top: 6px;
     left: 6px;
