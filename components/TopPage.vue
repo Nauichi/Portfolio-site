@@ -43,19 +43,13 @@
           document.querySelector(".red-dot").classList.add("is-Active");
         });
       },
-      Scroll(){
-        window.scrollBy({
-          top: 700,
-          left: 0,
-          behavior: 'smooth'
-        });
-      },
     }
   }
 </script>
 
 <style>
   .hello-parent {
+    padding-top: 100px;
     height: 100%;
     width: 100%;
     margin: 0;

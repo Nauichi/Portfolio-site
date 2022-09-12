@@ -10,6 +10,7 @@
     </section>
     <div id="About" class="about">
       <h2>ABOUT</h2>
+      <br>
         <b>Name :</b>  Shoma
         <br>
         <b>Sex :</b> Man
@@ -33,6 +34,7 @@
     </div>
     <div id="Works" class="works">
       <h2>WORKS</h2>
+      <br>
       <SlideIn>
         <a href="Not.html" target="_blank">
           <div class="work_items">
@@ -82,6 +84,7 @@
     </div>
     <div id="Skills" class="skills">
       <h2>SKILLS</h2>
+      <br>
       <FadeIn>
         <div class="circle"> 
           C
@@ -121,6 +124,7 @@
     </div>
     <div id="Contact" class="contact">
       <h2>CONTACT</h2>
+      <br>
       <div class="contact_area">
         ご質問、ご感想等、何かコメントがありましたらお気軽にお寄せください。
         <br>
@@ -193,16 +197,15 @@
     background-color: rgba(80, 80, 80, 0.75);
   }
   .top {
-    padding-top: 40px;
     padding-bottom: 40px;
-    height: 100vh;
+    min-height: 100vh;
   }
   .about {
     background: linear-gradient(to bottom, white, lightcyan);
     padding-top: 40px;
-    padding-bottom: 40px;
     padding-left: 4vh;
-    height: 100vh;
+    padding-bottom: 20px;
+    min-height: 100vh;
     cursor: default;
 
     color: black;
@@ -251,6 +254,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 4vh;
+    min-height: 100vh;
     cursor: default;
 
     color: #EAD9FF;
@@ -329,6 +333,7 @@
     padding-top: 40px;
     padding-bottom: 80px;
     padding-left: 4vh;
+    min-height: 100vh;
     cursor: default;
 
     color: black;
@@ -345,7 +350,8 @@
   .contact {
     background: linear-gradient(to bottom, #FFEEFF, #CCFFCC);
     padding-top: 40px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
+    min-height: 100vh;
     cursor: default;
 
     color: black;
@@ -523,7 +529,7 @@
   }
   .scrolldown{
     position:absolute;
-    bottom: 1%;
+    bottom: 3%;
     left: 5%;
     animation: arrowmove 1s ease-in-out infinite;
     cursor: pointer;
@@ -563,13 +569,13 @@
   }
   @keyframes arrowmove{
     0%{
-      bottom: 1%;
-    }
-    50%{
       bottom: 3%;
     }
+    50%{
+      bottom: 5%;
+    }
     100%{
-      bottom: 1%;
+      bottom: 3%;
     }
   }
   .sizuku {
