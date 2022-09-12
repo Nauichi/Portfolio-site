@@ -3,11 +3,11 @@
         <div class="gmenu">
             <nav class="nav">
                 <ul>
-                    <li><a @click="ChangeScroll(p_top)">TOP</a></li>
-                    <li><a @click="ChangeScroll(p_about)">ABOUT</a></li>
-                    <li><a @click="ChangeScroll(p_works)">WORKS</a></li>
-                    <li><a @click="ChangeScroll(p_skills)">SKILLS</a></li>
-                    <li><a @click="ChangeScroll(p_contact)">CONTACT</a></li>
+                    <li><a @click="ChangeScroll('Top')">TOP</a></li>
+                    <li><a @click="ChangeScroll('About')">ABOUT</a></li>
+                    <li><a @click="ChangeScroll('Works')">WORKS</a></li>
+                    <li><a @click="ChangeScroll('Skills')">SKILLS</a></li>
+                    <li><a @click="ChangeScroll('Contact')">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -16,11 +16,11 @@
                 <div :class="{btnout: open, btnline: !open}" ></div>
             </button>
             <div class="menu" v-bind:class="{'is-active' : open }">
-                <li class="menu__item"><a @click="ChangeScroll(p_top)">TOP</a></li>
-                <li class="menu__item"><a @click="ChangeScroll(p_about)">ABOUT</a></li>
-                <li class="menu__item"><a @click="ChangeScroll(p_works)">WORKS</a></li>
-                <li class="menu__item"><a @click="ChangeScroll(p_skills)">SKILLS</a></li>
-                <li class="menu__item"><a @click="ChangeScroll(p_contact2)">CONTACT</a></li>
+                <li class="menu__item"><a @click="ChangeScroll('Top')">TOP</a></li>
+                <li class="menu__item"><a @click="ChangeScroll('About')">ABOUT</a></li>
+                <li class="menu__item"><a @click="ChangeScroll('Works')">WORKS</a></li>
+                <li class="menu__item"><a @click="ChangeScroll('Skills')">SKILLS</a></li>
+                <li class="menu__item"><a @click="ChangeScroll('Contact')">CONTACT</a></li>
             </div>
         </div>
     </div>
@@ -207,20 +207,13 @@
       data() {
         return {
             open: false,
-            p_top: 0,
-            p_about: 670,
-            p_works: 1230,
-            p_skills: 1980,
-            p_contact: 2580,
-            p_contact2: 3900,
         };
       },
       methods:{
-        ChangeScroll(tp){
-          window.scrollTo({
-            top: tp,
-            left: 0,
-            behavior: 'smooth'
+        ChangeScroll(pg){
+          const element = document.getElementById(pg);
+          element.scrollIntoView({
+            behavior: "smooth"
           });
         },
       }
