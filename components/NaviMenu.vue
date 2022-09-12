@@ -3,7 +3,9 @@
         <div class="gmenu">
             <nav class="nav">
                 <ul>
-                  <button @click="ChangeScroll('Top')"><span class="home1"><span class="home2"></span></span></button>
+                  <button @click="ChangeScroll('Top')">
+                    <span class="home1"><span class="home2"></span></span>
+                  </button>
                   <li><a @click="ChangeScroll('About')">ABOUT</a></li>
                   <li><a @click="ChangeScroll('Works')">WORKS</a></li>
                   <li><a @click="ChangeScroll('Skills')">SKILLS</a></li>
