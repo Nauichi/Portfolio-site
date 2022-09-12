@@ -602,7 +602,7 @@
     height: 0px;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: royalblue;
+    background-color: rgba(60, 100, 225, 0.5);
     border-radius: 5px;
   }
 </style>
