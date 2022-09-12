@@ -3,11 +3,11 @@
         <div class="gmenu">
             <nav class="nav">
                 <ul>
-                    <li><a @click="ChangeScroll('Top')">TOP</a></li>
-                    <li><a @click="ChangeScroll('About')">ABOUT</a></li>
-                    <li><a @click="ChangeScroll('Works')">WORKS</a></li>
-                    <li><a @click="ChangeScroll('Skills')">SKILLS</a></li>
-                    <li><a @click="ChangeScroll('Contact')">CONTACT</a></li>
+                  <button @click="ChangeScroll('Top')"><span class="home1"><span class="home2"></span></span></button>
+                  <li><a @click="ChangeScroll('About')">ABOUT</a></li>
+                  <li><a @click="ChangeScroll('Works')">WORKS</a></li>
+                  <li><a @click="ChangeScroll('Skills')">SKILLS</a></li>
+                  <li><a @click="ChangeScroll('Contact')">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,7 +32,6 @@
     height: 50px;
     top: 0;
     background-color: rgba(80, 80, 80, 0.75);
-    padding-top: 12px;
     box-sizing: border-box;
     position: fixed;
     z-index: 500;
@@ -44,6 +43,7 @@
     list-style: none;
   }
   .nav li {
+    padding-top: 12px;
     list-style: none;
     cursor: pointer;
   }
@@ -69,6 +69,64 @@
   .nav a:hover:after {
     transform: translate(0, 0);
   }
+  .nav span{
+    height: 30px;
+    width: 30px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+  } 
+  .home1{
+    width: 30px;
+    height: 30px;
+    display:block;
+    padding-right: 35px;
+  }
+  .home1:before{
+    content: '';
+    display:block;
+    position: absolute;
+    top: 10px;
+    left: 7.8px;
+    border: 9px solid transparent;
+    border-bottom-color: white;
+    border-top: 0;
+    transform: scale(1,0.8);
+  }
+  .home1:after{
+    content: '';
+    height: 10px;
+    width: 10px;
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 8px;
+    border: 4px white solid; 
+    border-top-width: 2px;
+    border-bottom: 0;
+  }
+  .home2:before{
+    content: '';
+    height: 7px;
+    width: 3px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 23px;
+    background: white;
+  }
+  .home2:after{
+    content: '';
+    height: 18px;
+    width: 18px;
+    border-top: 4px white solid;
+    border-right: 4px white solid;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    transform: scale(1,0.8) rotate(-45deg);
+  }
+
   @media screen and (max-width: 650px){
     .gmenu{
       display: none;
