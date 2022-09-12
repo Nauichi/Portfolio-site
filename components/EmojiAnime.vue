@@ -11,7 +11,7 @@
 
 <style>
   .c {
-    padding-top: 12px;
+    padding-top: 15px;
 	  --dur: 1s;
 	  --color1: #17181c;
 	  --color2: #e3e4e8;
