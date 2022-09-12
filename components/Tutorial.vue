@@ -345,7 +345,7 @@
   .contact {
     background: linear-gradient(to bottom, #FFEEFF, #CCFFCC);
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
     cursor: default;
 
     color: black;
