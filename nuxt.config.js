@@ -18,6 +18,7 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
 
+      { hid: 'og:title', property: 'og:title', content: 'My_Portfolio-site'},
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'My_Portfolio-site' },
