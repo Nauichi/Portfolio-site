@@ -87,31 +87,31 @@
     display:block;
     position: absolute;
     top: 10px;
-    left: 7.8px;
-    border: 9px solid transparent;
+    left: 7px;
+    border: 10px solid transparent;
     border-bottom-color: white;
     border-top: 0;
     transform: scale(1,0.8);
   }
   .home1:after{
     content: '';
-    height: 10px;
-    width: 10px;
+    height: 8px;
+    width: 8px;
     display: block;
     position: absolute;
-    top: 18px;
-    left: 8px;
-    border: 4px white solid; 
+    top: 18.5px;
+    left: 7px;
+    border: 6px white solid; 
     border-top-width: 2px;
     border-bottom: 0;
   }
   .home2:before{
     content: '';
-    height: 7px;
+    height: 6px;
     width: 3px;
     display: block;
     position: absolute;
-    top: 5px;
+    top: 6px;
     left: 23px;
     background: white;
   }
@@ -119,8 +119,8 @@
     content: '';
     height: 18px;
     width: 18px;
-    border-top: 4px white solid;
-    border-right: 4px white solid;
+    border-top: 3px white solid;
+    border-right: 3px white solid;
     position: absolute;
     top: 6px;
     left: 6px;
