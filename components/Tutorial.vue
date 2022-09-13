@@ -38,7 +38,7 @@
       <SlideIn>
         <a href="Not.html" target="_blank">
           <div class="work_items">
-            <img src="./404.png" />
+            <img src="./404.png" alt="404 Not Foundページ画像" />
             <div class="mask1" />
 	          <div class="mask2" />
 	          <div class="work_name">
@@ -48,7 +48,7 @@
         </a>
         <a href="IoT_browser.html" target="_blank">
           <div class="work_items">
-            <img src="./IoT.png" />
+            <img src="./IoT.png" alt="IoT 制作ブラウザゲーム画像" />
             <div class="mask1" />
 	          <div class="mask2" />
 	          <div class="work_name">
@@ -58,7 +58,7 @@
         </a>
         <a href="#" target="_blank">
           <div class="work_items">
-            <img src="./MyPortfolio.png" />
+            <img src="./MyPortfolio.png" alt="Portfolioサイト画像" />
             <div class="mask1" />
 	          <div class="mask2" />
 	          <div class="work_name">
@@ -98,11 +98,11 @@
         </div>
         <div class="circle">
           CSS
-          <span><br>404ページで<br>初使用<br>まだ知らないことは多い</span>
+          <span><br>404ページで<br>初使用<br>まだ知らないことは<br>多い</span>
         </div>
         <div class="circle">
           JavaScript 
-          <span><br>404ページで<br>初使用<br>まだ使いこなせていない</span>
+          <span><br>404ページで<br>初使用<br>まだ使いこなせて<br>いない</span>
         </div>
       </FadeIn>
       <FadeIn>
@@ -518,14 +518,14 @@
   }
   .circle span{
     position: absolute;
-    left: 18%;
+    left: 7%;
     top: 58%;
-    width: 150px;
+    width: 200px;
     line-height: 20px;
     transform: translateY(-50%);
     text-align:center;
     color: black;
-    font-size: 17px;
+    font-size: 19px;
     font-family: "Segoe Script", "SavoyeLetPlain";
   }
   .scrolldown{
