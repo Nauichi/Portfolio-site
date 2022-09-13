@@ -39,61 +39,59 @@
   export default {
     methods:{
       Change(){
-        document.querySelector(".dot").addEventListener("click", function(){
-          const m = Math.floor( Math.random() * 5 );
-          if(m === 1){
-            document.querySelector(".dot").classList.add("is-Active4");
-          }
-          else if(m === 2){
-            document.querySelector(".dot").classList.add("is-Active3");
-          }
-          else if(m === 3){
-            document.querySelector(".dot").classList.add("is-Active2");
-          }
-          else if(m === 4){
-            document.querySelector(".dot").classList.add("is-Active1");
-          }
-          else{
-            document.querySelector(".dot").classList.add("Is-Active");
-          }
+        const m = Math.floor( Math.random() * 5 );
+        if(m === 1){
+          document.querySelector(".dot").classList.add("is-Active4");
+        }
+        else if(m === 2){
+          document.querySelector(".dot").classList.add("is-Active3");
+        }
+        else if(m === 3){
+          document.querySelector(".dot").classList.add("is-Active2");
+        }
+        else if(m === 4){
+          document.querySelector(".dot").classList.add("is-Active1");
+        }
+        else{
+          document.querySelector(".dot").classList.add("Is-Active");
+        }
 
-          setTimeout(() => {
-            if (document.querySelector(".dot").classList.contains('Is-Active') === false ) {
-              const n = Math.floor( Math.random() * 3 );
-              if (document.querySelector(".dot").classList.contains('A') === true ) {
-                document.querySelector(".dot").classList.remove("A");
-              }
-              else if (document.querySelector(".dot").classList.contains('B') === true ) {
-                document.querySelector(".dot").classList.remove("B");
-              }
+        setTimeout(() => {
+          if (document.querySelector(".dot").classList.contains('Is-Active') === false ) {
+            const n = Math.floor( Math.random() * 3 );
+            if (document.querySelector(".dot").classList.contains('A') === true ) {
+              document.querySelector(".dot").classList.remove("A");
+            }
+            else if (document.querySelector(".dot").classList.contains('B') === true ) {
+              document.querySelector(".dot").classList.remove("B");
+            }
 
-              if(n === 1){
-                document.querySelector(".dot").classList.add("A");
-              }
-              else if(n === 2){
-                document.querySelector(".dot").classList.add("B");
-              }
+            if(n === 1){
+              document.querySelector(".dot").classList.add("A");
             }
-          }, 1000);
+            else if(n === 2){
+              document.querySelector(".dot").classList.add("B");
+            }
+          }
+        }, 1000);
 
-          setTimeout(() => {
-            if (document.querySelector(".dot").classList.contains('Is-Active') === true ) {
-              document.querySelector(".dot").classList.remove("Is-Active");
-            }
-            if (document.querySelector(".dot").classList.contains('is-Active1') === true ) {
-              document.querySelector(".dot").classList.remove("is-Active1");
-            }
-            if (document.querySelector(".dot").classList.contains('is-Active2') === true ) {
-              document.querySelector(".dot").classList.remove("is-Active2");
-            }
-            if (document.querySelector(".dot").classList.contains('is-Active3') === true ) {
-              document.querySelector(".dot").classList.remove("is-Active3");
-            }
-            if (document.querySelector(".dot").classList.contains('is-Active4') === true ) {
-              document.querySelector(".dot").classList.remove("is-Active4");
-            }
-          }, 2500);
-        });
+        setTimeout(() => {
+          if (document.querySelector(".dot").classList.contains('Is-Active') === true ) {
+            document.querySelector(".dot").classList.remove("Is-Active");
+          }
+          if (document.querySelector(".dot").classList.contains('is-Active1') === true ) {
+            document.querySelector(".dot").classList.remove("is-Active1");
+          }
+          if (document.querySelector(".dot").classList.contains('is-Active2') === true ) {
+            document.querySelector(".dot").classList.remove("is-Active2");
+          }
+          if (document.querySelector(".dot").classList.contains('is-Active3') === true ) {
+            document.querySelector(".dot").classList.remove("is-Active3");
+          }
+          if (document.querySelector(".dot").classList.contains('is-Active4') === true ) {
+            document.querySelector(".dot").classList.remove("is-Active4");
+          }
+        }, 2500);
       },
     }
   }
