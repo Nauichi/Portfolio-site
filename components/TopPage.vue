@@ -40,17 +40,17 @@
     methods:{
       Change(){
         document.querySelector(".dot").addEventListener("click", function(){
-          const m = Math.floor( Math.random() * 10 );
-          if(m < 2){
+          const m = Math.floor( Math.random() * 5 );
+          if(m === 1){
             document.querySelector(".dot").classList.add("is-Active4");
           }
-          else if(m < 4){
+          else if(m === 2){
             document.querySelector(".dot").classList.add("is-Active3");
           }
-          else if(m < 6){
+          else if(m === 3){
             document.querySelector(".dot").classList.add("is-Active2");
           }
-          else if(m < 8){
+          else if(m === 4){
             document.querySelector(".dot").classList.add("is-Active1");
           }
           else{
