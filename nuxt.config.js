@@ -31,7 +31,7 @@ export default {
       { name: 'apple-mobile-web-app-title', content: 'APP_TITLE' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/main.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: 'main.ico' },
       { rel: 'apple-touch-startup-image', media: '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)', href: '/iphone5_splash.png' },
       { rel: 'apple-touch-startup-image', media: '(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)', href: '/iphone6_splash.png' },
       { rel: 'apple-touch-startup-image', media: '(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)', href: '/iphoneplus_splash.png' },
