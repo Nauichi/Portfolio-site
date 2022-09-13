@@ -24,8 +24,16 @@ export default {
       { hid: 'og:description', property: 'og:description', content: '僕個人のポートフォリオになります。学生時に実習で制作したもので拙いものですが、クリックエフェクトやアニメーションを入れてます。micro bitのゲームのlinkがありますが、これはbluetoothの加速度サービスを入れたmicro bitが無いと、プレイすることが出来ません。ご了承ください。' },
       { hid: 'og:image', property: 'og:image', content: '/samune.jpg' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+
+      { name: 'mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
+      { name: 'apple-mobile-web-app-title', content: 'APP_TITLE' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/main.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/main.ico' },
+      { rel: 'apple-touch-startup-image',  href: '/icon_pwa.png' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -41,6 +49,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/pwa',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,4 +57,54 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  pwa: {
+    manifest: {
+      lang: 'ja',
+      name: 'Shomas_Portfolio',
+      short_name: 'SN_PorT',
+      description: '学生時に制作した個人のポートフォリオ',
+      display: 'standalone',
+      theme_color: '#000',
+      background_color: '#fff',
+      orientation: 'portrait',
+      scope: '/',
+      start_url: '/',
+      icons: [
+        {
+          src: 'SRC_DIR/static/*****/icon_pwa.png',
+          sizes: '512x512',
+          type: 'image/png'
+        }
+      ]
+    },
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: '^https://polyfill.io/.*',
+          handler: 'cacheFirst'
+        },
+        {
+          urlPattern: `${SITE_URL}.*`,
+          handler: 'staleWhileRevalidate',
+          strategyOptions: {
+            cacheName: 'site-cache',
+          },
+          strategyPlugins: [
+            {
+              use: 'Expiration',
+              config: {
+                maxAgeSeconds: 24 * 60 * 60 * 30
+              }
+            }
+          ]
+        }
+      ]
+    },
+    icon: {
+      source: 'SRC_DIR/static/*****/icon_pwa.png',
+      fileName: 'icon_pwa.png'
+    }
+  },
+
 }
