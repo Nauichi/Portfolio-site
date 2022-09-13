@@ -177,7 +177,9 @@
       </div>
     </div>
     <div class="footer">
-      &copy; 2022 nauichi
+      <p style="margin-right: 10px">
+        &copy; 2022 nauichi
+      </p>
     </div>
   </div>
 </template>
@@ -193,7 +195,7 @@
     text-align: right;
     z-index: 1;
     width: 100%;
-    height: 4vh;
+    height: 4.5vh;
 
     color: white;
     background-color: rgba(30, 30, 30, 0.75);
@@ -606,7 +608,7 @@
     height: 0px;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: rgba(60, 100, 225, 0.5);
+    background-color: #ff9900;
     border-radius: 5px;
   }
 </style>
