@@ -28,7 +28,7 @@
             <circle class="O-stroke" cx="231" cy="215" r="48" stroke="#000" fill="none" stroke-width="31" />
           </g>
     
-          <g id="red-dot">
+          <g id="dot">
             <line x1="325" y1="260" x2="325" y2="260" class="dot" @click="Change()"/>
           </g>  
         </svg>
@@ -344,7 +344,7 @@
     stroke: red;
     stroke-width: 44px;
     stroke-linecap: round;
-    animation: red-dot-grow 8s ease-out forwards;
+    animation: dot-grow 8s ease-out forwards;
 
     transition: .8s;
     cursor: pointer;
@@ -385,7 +385,7 @@
     transition: .8s;
     transform: translate(-500px, 0px);
   }
-  @keyframes red-dot-grow {
+  @keyframes dot-grow {
     0% {
       stroke-width: 0px;
     }
