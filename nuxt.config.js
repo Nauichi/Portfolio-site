@@ -66,7 +66,7 @@ export default {
       description: '学生時に制作した個人のポートフォリオ',
       display: 'standalone',
       theme_color: '#000',
-      background_color: '#fff',
+      background_color: '#c54ea0',
       orientation: 'portrait',
       scope: '/',
       start_url: '/',
