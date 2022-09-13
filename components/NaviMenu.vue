@@ -33,7 +33,7 @@
     width: 100%;
     height: 50px;
     top: 0;
-    background-color: rgba(80, 80, 80, 0.75);
+    background-color: rgba(30, 30, 30, 0.75);
     box-sizing: border-box;
     position: fixed;
     z-index: 500;
@@ -216,7 +216,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(80, 80, 80, 0.75);
+    background: rgba(30, 30, 30, 0.75);
   }
   .menu__item{
     width: 100%;

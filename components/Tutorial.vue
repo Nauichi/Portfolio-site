@@ -196,7 +196,7 @@
     height: 4vh;
 
     color: white;
-    background-color: rgba(80, 80, 80, 0.75);
+    background-color: rgba(30, 30, 30, 0.75);
   }
   .top {
     padding-bottom: 40px;
@@ -500,7 +500,7 @@
   .circle{
     position: relative;
     display: inline-block;
-    width: 180px;
+    width: 230px;
     height: 180px;
     border-radius: 50%;
     background-color: pink;
@@ -518,7 +518,7 @@
   }
   .circle span{
     position: absolute;
-    left: 8%;
+    left: 18%;
     top: 58%;
     width: 150px;
     line-height: 20px;
