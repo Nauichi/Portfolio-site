@@ -85,7 +85,6 @@ export default {
           handler: 'cacheFirst'
         },
         {
-          urlPattern: `${SITE_URL}.*`,
           handler: 'staleWhileRevalidate',
           strategyOptions: {
             cacheName: 'site-cache',
