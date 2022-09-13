@@ -29,7 +29,7 @@
           </g>
     
           <g id="red-dot">
-            <line x1="325" y1="260" x2="325" y2="260" stroke="#FF5851" class="red-dot" @click="Change()"/>
+            <line x1="325" y1="260" x2="325" y2="260" class="dot" @click="Change()"/>
           </g>  
         </svg>
       </div>
@@ -39,8 +39,60 @@
   export default {
     methods:{
       Change(){
-        document.querySelector(".red-dot").addEventListener("click", function(){
-          document.querySelector(".red-dot").classList.add("is-Active");
+        document.querySelector(".dot").addEventListener("click", function(){
+          const m = Math.floor( Math.random() * 10 );
+          if(m < 2){
+            document.querySelector(".dot").classList.add("Is-Active4");
+          }
+          else if(m < 4){
+            document.querySelector(".dot").classList.add("is-Active3");
+          }
+          else if(m < 6){
+            document.querySelector(".dot").classList.add("is-Active2");
+          }
+          else if(m < 8){
+            document.querySelector(".dot").classList.add("is-Active1");
+          }
+          else{
+            document.querySelector(".dot").classList.add("is-Active");
+          }
+
+          setTimeout(() => {
+            if (document.querySelector(".dot").classList.contains('Is-Active') === false ) {
+              const n = Math.floor( Math.random() * 3 );
+              if (document.querySelector(".dot").classList.contains('A') === true ) {
+                document.querySelector(".dot").classList.remove("A");
+              }
+              else if (document.querySelector(".dot").classList.contains('B') === true ) {
+                document.querySelector(".dot").classList.remove("B");
+              }
+
+              if(n === 1){
+                document.querySelector(".dot").classList.add("A");
+              }
+              else if(n === 2){
+                document.querySelector(".dot").classList.add("B");
+              }
+            }
+          }, 1000);
+
+          setTimeout(() => {
+            if (document.querySelector(".dot").classList.contains('Is-Active') === true ) {
+              document.querySelector(".dot").classList.remove("Is-Active");
+            }
+            if (document.querySelector(".dot").classList.contains('is-Active1') === true ) {
+              document.querySelector(".dot").classList.remove("is-Active1");
+            }
+            if (document.querySelector(".dot").classList.contains('is-Active2') === true ) {
+              document.querySelector(".dot").classList.remove("is-Active2");
+            }
+            if (document.querySelector(".dot").classList.contains('is-Active3') === true ) {
+              document.querySelector(".dot").classList.remove("is-Active3");
+            }
+            if (document.querySelector(".dot").classList.contains('is-Active4') === true ) {
+              document.querySelector(".dot").classList.remove("is-Active4");
+            }
+          }, 2500);
         });
       },
     }
@@ -290,16 +342,50 @@
     }
   }
 
-  .red-dot {
+  .dot {
+    stroke: red;
     stroke-width: 44px;
     stroke-linecap: round;
     animation: red-dot-grow 8s ease-out forwards;
 
+    transition: .8s;
     cursor: pointer;
   }
-  .red-dot.is-Active{
+  .dot.A{
+    stroke: blue;
+    stroke-width: 44px;
+    stroke-linecap: round;
+
     transition: .8s;
-    transform: rotateX(100deg);
+    cursor: pointer;
+  }
+  .dot.B{
+    stroke: green;
+    stroke-width: 44px;
+    stroke-linecap: round;
+
+    transition: .8s;
+    cursor: pointer;
+  }
+  .dot.Is-Active{
+    transition: .8s;
+    transform: scale(0.5) translate(75%, 75%);
+  }
+  .dot.is-Active1{
+    transition: .8s;
+    transform: translate(0px, -500px);
+  }
+  .dot.is-Active2{
+    transition: .8s;
+    transform: translate(100px, 0px);
+  }
+  .dot.is-Active3{
+    transition: .8s;
+    transform: translate(0px, 200px);
+  }
+  .dot.is-Active4{
+    transition: .8s;
+    transform: translate(-500px, 0px);
   }
   @keyframes red-dot-grow {
     0% {
