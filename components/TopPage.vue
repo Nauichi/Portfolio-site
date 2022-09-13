@@ -42,7 +42,7 @@
         document.querySelector(".dot").addEventListener("click", function(){
           const m = Math.floor( Math.random() * 10 );
           if(m < 2){
-            document.querySelector(".dot").classList.add("Is-Active4");
+            document.querySelector(".dot").classList.add("is-Active4");
           }
           else if(m < 4){
             document.querySelector(".dot").classList.add("is-Active3");
@@ -54,7 +54,7 @@
             document.querySelector(".dot").classList.add("is-Active1");
           }
           else{
-            document.querySelector(".dot").classList.add("is-Active");
+            document.querySelector(".dot").classList.add("Is-Active");
           }
 
           setTimeout(() => {
