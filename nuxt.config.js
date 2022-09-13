@@ -27,7 +27,7 @@ export default {
 
       { name: 'mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'white' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
       { name: 'apple-mobile-web-app-title', content: 'APP_TITLE' },
     ],
     link: [
@@ -61,7 +61,7 @@ export default {
   pwa: {
     manifest: {
       lang: 'ja',
-      name: 'Shomas_Portfolio',
+      name: 'Shoma_Portfolio',
       short_name: 'SN_PorT',
       description: '学生時に制作した個人のポートフォリオ',
       display: 'standalone',
