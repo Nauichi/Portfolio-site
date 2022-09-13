@@ -110,7 +110,7 @@ export default {
       ]
     },
     icon: {
-      source: 'SRC_DIR/static/*****/icon_pwa.png',
+      source: '/icon_pwa.png',
       fileName: 'icon_pwa.png'
     }
   },
